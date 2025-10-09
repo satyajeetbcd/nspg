@@ -1,0 +1,35 @@
+# Query: <h5 class="mb-0 fw-bold">
+
+14 results - 9 files
+
+resources\views\staff\orders\show.blade.php:
+  251:                             <h5 class="mb-0 fw-bold text-white">
+
+resources\views\staff\plans\create.blade.php:
+  41:                 <h5 class="mb-0 fw-bold text-white">
+
+resources\views\staff\plans\index.blade.php:
+  85:                 <h5 class="mb-0 fw-bold text-white">
+
+resources\views\staff\plans\show.blade.php:
+   36:                 <h5 class="mb-0 fw-bold text-white">
+  132:             <h5 class="mb-0 fw-bold text-white">
+  169:             <h5 class="mb-0 fw-bold text-white">
+
+resources\views\staff\plans\subscribers.blade.php:
+  76:                 <h5 class="mb-0 fw-bold text-white">
+
+resources\views\staff\subscriptions\create.blade.php:
+  42:                         <h5 class="mb-0 fw-bold text-white">
+
+resources\views\staff\subscriptions\edit.blade.php:
+  47:                         <h5 class="mb-0 fw-bold text-white">
+
+resources\views\staff\subscriptions\index.blade.php:
+  77:                 <h5 class="mb-0 fw-bold text-white">
+
+resources\views\staff\subscriptions\show.blade.php:
+   43:                         <h5 class="mb-0 fw-bold text-white">
+  129:                         <h5 class="mb-0 fw-bold text-white">
+  178:                         <h5 class="mb-0 fw-bold text-white">
+  229:                         <h5 class="mb-0 fw-bold text-white">
