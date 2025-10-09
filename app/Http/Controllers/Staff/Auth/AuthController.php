@@ -14,7 +14,7 @@ class AuthController extends Controller
     public function showLoginForm()
     {
         if (Auth::guard('staff')->check()) {
-            return redirect()->route('staff.dashboard', ['locale' => app()->getLocale()]);
+            return redirect('/admin');
         }
 
         return view('staff.auth.login');
@@ -33,7 +33,7 @@ class AuthController extends Controller
         if (Auth::guard('staff')->attempt($request->only('email', 'password'))) {
             $request->session()->regenerate();
 
-            return redirect()->intended(route('staff.dashboard', ['locale' => app()->getLocale()]))
+            return redirect()->intended('/admin')
                 ->with('success', 'Welcome back!');
         }
 
@@ -52,7 +52,7 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('staff.login', ['locale' => app()->getLocale()])
+        return redirect()->route('login', ['locale' => app()->getLocale()])
             ->with('success', 'You have been logged out successfully.');
     }
 }

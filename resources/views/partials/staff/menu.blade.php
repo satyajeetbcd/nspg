@@ -17,7 +17,7 @@
     @if (Auth::guard('staff')->check())
         <ul class="list-unstyled">
             <li class="mb-2">
-                <a href="{{ route('staff.dashboard') }}" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-start px-3 py-2 rounded-3 sidebar-main-item">
+                <a href="/admin" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-start px-3 py-2 rounded-3 sidebar-main-item">
                     <i class="fas fa-tachometer-alt me-3"></i>
                     <span class="fw-medium">{{ __('Dashboard') }}</span>
                 </a>

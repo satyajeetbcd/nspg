@@ -140,3 +140,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('calculator/{setting}/toggle-status', [App\Http\Controllers\Admin\CalculatorController::class, 'toggleStatus'])->name('calculator.toggle-status');
     Route::post('calculator/reset-defaults', [App\Http\Controllers\Admin\CalculatorController::class, 'resetToDefaults'])->name('calculator.reset-defaults');
 });
+
+// Admin redirect route
+Route::get('/admin', function () {
+    return redirect()->route('staff.dashboard', ['locale' => app()->getLocale()]);
+})->middleware('staff');
