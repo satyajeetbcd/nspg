@@ -1,0 +1,36 @@
+
+@font-face {
+  font-family: 'tejawal-bold-400';
+  src: url('../../fonts/tajawal/Tajawal-ExtraBold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,body{
+    font-family:  'tejawal-bold-400';
+    direction: rtl;
+}
+/* .single-price-box .feature-list li{
+    text-align: right;
+}
+.main-nav ul li a {
+    font-weight: 600;
+}
+.main-nav ul li:hover ul.sub-menu{
+    margin-top: 10px;
+}
+
+.footer-menu li a{
+    padding-right: 16px;
+}
+.footer-menu li a:hover::after{
+    right: 0;
+}
+.footer-menu li a:hover:before{
+    right: 0;
+}
+
+*/
+input{
+    direction: rtl !important;
+} 

@@ -1,0 +1,175 @@
+
+---Downloaded files---
+The import files for: Strnix were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://127.0.0.1
+Data file = C:\xampp\htdocs\wp-content\plugins\strnix-demo-installer/demo-data/demo1/contents.xml
+Widget file = C:\xampp\htdocs\wp-content\plugins\strnix-demo-installer/demo-data/demo1/widgets.wie
+Customizer file = C:\xampp\htdocs\wp-content\plugins\strnix-demo-installer/demo-data/demo1/customize.dat
+Redux files:
+strnix_options -> C:\xampp\htdocs\wp-content\plugins\strnix-demo-installer/demo-data/demo1/settings.json 
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "logo" (Media)
+[ERROR] Failed to import "cooment" (Media)
+[ERROR] Failed to import "phone" (Media)
+[ERROR] Failed to import "foorer-logo-1" (Media)
+[ERROR] Failed to import "home2" (Media)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "logo" (Media)
+[ERROR] Failed to import "cooment" (Media)
+[ERROR] Failed to import "phone" (Media)
+[ERROR] Failed to import "foorer-logo-1" (Media)
+[ERROR] Failed to import "home2" (Media)
+[ERROR] Failed to import "nav-logo" (Media)
+[ERROR] Failed to import "logo-4" (Media)
+[ERROR] Failed to import "logo-4" (Media)
+[ERROR] Failed to import "Group 11" (Media)
+[ERROR] Failed to import "Group 12" (Media)
+[ERROR] Failed to import "Group 12" (Media)
+[ERROR] Failed to import "Group 12" (Media)
+[ERROR] Failed to import "Group 13" (Media)
+[ERROR] Failed to import "Group 13" (Media)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "logo" (Media)
+[ERROR] Failed to import "cooment" (Media)
+[ERROR] Failed to import "phone" (Media)
+[ERROR] Failed to import "foorer-logo-1" (Media)
+[ERROR] Failed to import "home2" (Media)
+[ERROR] Failed to import "nav-logo" (Media)
+[ERROR] Failed to import "logo-4" (Media)
+[ERROR] Failed to import "logo-4" (Media)
+[ERROR] Failed to import "Group 11" (Media)
+[ERROR] Failed to import "Group 12" (Media)
+[ERROR] Failed to import "Group 12" (Media)
+[ERROR] Failed to import "Group 12" (Media)
+[ERROR] Failed to import "Group 13" (Media)
+[ERROR] Failed to import "Group 13" (Media)
+
+
+------
+New AJAX call!
+[ERROR] Failed to import "logo" (Media)
+[ERROR] Failed to import "cooment" (Media)
+[ERROR] Failed to import "phone" (Media)
+[ERROR] Failed to import "foorer-logo-1" (Media)
+[ERROR] Failed to import "home2" (Media)
+[ERROR] Failed to import "nav-logo" (Media)
+[ERROR] Failed to import "logo-4" (Media)
+[ERROR] Failed to import "logo-4" (Media)
+[ERROR] Failed to import "Group 11" (Media)
+[ERROR] Failed to import "Group 12" (Media)
+[ERROR] Failed to import "Group 12" (Media)
+[ERROR] Failed to import "Group 12" (Media)
+[ERROR] Failed to import "Group 13" (Media)
+[ERROR] Failed to import "Group 13" (Media)
+
+
+---Importing widgets---
+Blog Sidebar : 
+
+Search - No Title - Widget already exists
+Categories - No Title - Widget already exists
+Tag Cloud - No Title - Imported
+
+
+
+---Importing Redux settings---
+Redux settings import for: strnix_options finished successfully!
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---pt-ocdi/after_import---
+<br />
+<b>Notice</b>:  Trying to get property 'ID' of non-object in <b>C:\xampp\htdocs\wp-content\plugins\strnix-demo-installer\one-click-demo-import-setting.php</b> on line <b>48</b><br />
+

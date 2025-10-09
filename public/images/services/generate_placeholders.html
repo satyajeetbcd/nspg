@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service Image Placeholder Generator</title>
+</head>
+<body>
+    <h2>Service Image Placeholder Generator</h2>
+    <p>Right-click on each image and save as the corresponding filename:</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
+        <!-- EPC Services -->
+        <div>
+            <h3>EPC Services</h3>
+            <canvas id="epc" width="400" height="200" style="border: 1px solid #ccc;"></canvas>
+            <p>Save as: epc-services.jpg</p>
+        </div>
+        
+        <!-- Solar Finance -->
+        <div>
+            <h3>Solar Finance</h3>
+            <canvas id="finance" width="400" height="200" style="border: 1px solid #ccc;"></canvas>
+            <p>Save as: solar-finance.jpg</p>
+        </div>
+        
+        <!-- Operations & Maintenance -->
+        <div>
+            <h3>Operations & Maintenance</h3>
+            <canvas id="maintenance" width="400" height="200" style="border: 1px solid #ccc;"></canvas>
+            <p>Save as: operations-maintenance.jpg</p>
+        </div>
+        
+        <!-- Rooftop Solar -->
+        <div>
+            <h3>Rooftop Solar</h3>
+            <canvas id="rooftop" width="400" height="200" style="border: 1px solid #ccc;"></canvas>
+            <p>Save as: rooftop-solar.jpg</p>
+        </div>
+        
+        <!-- Ground-Mounted Solar -->
+        <div>
+            <h3>Ground-Mounted Solar</h3>
+            <canvas id="ground" width="400" height="200" style="border: 1px solid #ccc;"></canvas>
+            <p>Save as: ground-mounted-solar.jpg</p>
+        </div>
+        
+        <!-- High ROI Solutions -->
+        <div>
+            <h3>High ROI Solutions</h3>
+            <canvas id="roi" width="400" height="200" style="border: 1px solid #ccc;"></canvas>
+            <p>Save as: high-roi-solutions.jpg</p>
+        </div>
+    </div>
+
+    <script>
+        // EPC Services - Orange gradient with gears
+        const epcCanvas = document.getElementById('epc');
+        const epcCtx = epcCanvas.getContext('2d');
+        const epcGradient = epcCtx.createLinearGradient(0, 0, 400, 200);
+        epcGradient.addColorStop(0, '#ff6b35');
+        epcGradient.addColorStop(1, '#ff8a65');
+        epcCtx.fillStyle = epcGradient;
+        epcCtx.fillRect(0, 0, 400, 200);
+        epcCtx.fillStyle = 'white';
+        epcCtx.font = 'bold 24px Arial';
+        epcCtx.textAlign = 'center';
+        epcCtx.fillText('EPC Services', 200, 100);
+        epcCtx.font = '16px Arial';
+        epcCtx.fillText('Engineering, Procurement & Construction', 200, 130);
+
+        // Solar Finance - Blue gradient with money icon
+        const financeCanvas = document.getElementById('finance');
+        const financeCtx = financeCanvas.getContext('2d');
+        const financeGradient = financeCtx.createLinearGradient(0, 0, 400, 200);
+        financeGradient.addColorStop(0, '#2196F3');
+        financeGradient.addColorStop(1, '#64B5F6');
+        financeCtx.fillStyle = financeGradient;
+        financeCtx.fillRect(0, 0, 400, 200);
+        financeCtx.fillStyle = 'white';
+        financeCtx.font = 'bold 24px Arial';
+        financeCtx.textAlign = 'center';
+        financeCtx.fillText('Solar Finance', 200, 100);
+        financeCtx.font = '16px Arial';
+        financeCtx.fillText('Financial Solutions for Solar', 200, 130);
+
+        // Operations & Maintenance - Green gradient with tools
+        const maintenanceCanvas = document.getElementById('maintenance');
+        const maintenanceCtx = maintenanceCanvas.getContext('2d');
+        const maintenanceGradient = maintenanceCtx.createLinearGradient(0, 0, 400, 200);
+        maintenanceGradient.addColorStop(0, '#4CAF50');
+        maintenanceGradient.addColorStop(1, '#81C784');
+        maintenanceCtx.fillStyle = maintenanceGradient;
+        maintenanceCtx.fillRect(0, 0, 400, 200);
+        maintenanceCtx.fillStyle = 'white';
+        maintenanceCtx.font = 'bold 24px Arial';
+        maintenanceCtx.textAlign = 'center';
+        maintenanceCtx.fillText('O&M Services', 200, 100);
+        maintenanceCtx.font = '16px Arial';
+        maintenanceCtx.fillText('Operations & Maintenance', 200, 130);
+
+        // Rooftop Solar - Purple gradient with house
+        const rooftopCanvas = document.getElementById('rooftop');
+        const rooftopCtx = rooftopCanvas.getContext('2d');
+        const rooftopGradient = rooftopCtx.createLinearGradient(0, 0, 400, 200);
+        rooftopGradient.addColorStop(0, '#9C27B0');
+        rooftopGradient.addColorStop(1, '#BA68C8');
+        rooftopCtx.fillStyle = rooftopGradient;
+        rooftopCtx.fillRect(0, 0, 400, 200);
+        rooftopCtx.fillStyle = 'white';
+        rooftopCtx.font = 'bold 24px Arial';
+        rooftopCtx.textAlign = 'center';
+        rooftopCtx.fillText('Rooftop Solar', 200, 100);
+        rooftopCtx.font = '16px Arial';
+        rooftopCtx.fillText('Residential & Commercial', 200, 130);
+
+        // Ground-Mounted Solar - Teal gradient with industrial
+        const groundCanvas = document.getElementById('ground');
+        const groundCtx = groundCanvas.getContext('2d');
+        const groundGradient = groundCtx.createLinearGradient(0, 0, 400, 200);
+        groundGradient.addColorStop(0, '#009688');
+        groundGradient.addColorStop(1, '#4DB6AC');
+        groundCtx.fillStyle = groundGradient;
+        groundCtx.fillRect(0, 0, 400, 200);
+        groundCtx.fillStyle = 'white';
+        groundCtx.font = 'bold 24px Arial';
+        groundCtx.textAlign = 'center';
+        groundCtx.fillText('Ground-Mounted Solar', 200, 100);
+        groundCtx.font = '16px Arial';
+        groundCtx.fillText('Industrial & Utility Scale', 200, 130);
+
+        // High ROI Solutions - Red gradient with chart
+        const roiCanvas = document.getElementById('roi');
+        const roiCtx = roiCanvas.getContext('2d');
+        const roiGradient = roiCtx.createLinearGradient(0, 0, 400, 200);
+        roiGradient.addColorStop(0, '#F44336');
+        roiGradient.addColorStop(1, '#EF5350');
+        roiCtx.fillStyle = roiGradient;
+        roiCtx.fillRect(0, 0, 400, 200);
+        roiCtx.fillStyle = 'white';
+        roiCtx.font = 'bold 24px Arial';
+        roiCtx.textAlign = 'center';
+        roiCtx.fillText('High ROI Solutions', 200, 100);
+        roiCtx.font = '16px Arial';
+        roiCtx.fillText('Up to 30% Return on Investment', 200, 130);
+    </script>
+</body>
+</html>
