@@ -672,7 +672,8 @@ use Illuminate\Support\Facades\Storage;
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="solar-panels-visual">
+                                <div class="hero-image">
+                                 
                                 <img src="{{ asset($banners[0]->image_path) }}" 
                                          alt="Solar Panels" class="img-fluid">
                                 </div>

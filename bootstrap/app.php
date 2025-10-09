@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\AdminAuth;
 use App\Http\Middleware\Auth\EnsureAdmin;
 use App\Http\Middleware\Auth\EnsureCustomer;
 use App\Http\Middleware\Auth\EnsureStaff;
@@ -41,6 +42,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'customer' => EnsureCustomer::class,
             'staff' => StaffAuthenticate::class,
             'admin' => EnsureAdmin::class,
+            'admin.auth' => AdminAuth::class,
 
             // Role-based access
             'user.type' => CheckUserType::class,

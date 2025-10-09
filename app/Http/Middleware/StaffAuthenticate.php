@@ -21,7 +21,7 @@ class StaffAuthenticate
                 return response()->json(['message' => 'Unauthenticated.'], 401);
             }
 
-            return redirect()->route('login', ['locale' => app()->getLocale()])
+            return redirect()->route('login')
                 ->with('error', 'Please log in to access this page.');
         }
 

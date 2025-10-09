@@ -112,7 +112,19 @@ Route::get('/reviews', [App\Http\Controllers\ReviewController::class, 'index'])-
 Route::post('/reviews', [App\Http\Controllers\ReviewController::class, 'store'])->name('reviews.store');
 Route::get('/api/reviews', [App\Http\Controllers\ReviewController::class, 'getReviews'])->name('api.reviews');
 
-Route::prefix('admin')->name('admin.')->group(function () {
+
+// Admin Authentication Routes (outside middleware to prevent redirect loops)
+Route::get('admin/login', [App\Http\Controllers\Admin\AuthController::class, 'showLoginForm'])->name('admin.login');
+Route::post('admin/login', [App\Http\Controllers\Admin\AuthController::class, 'login'])->name('admin.login.submit');
+
+// Admin Password Reset Routes
+Route::get('admin/forgot-password', [App\Http\Controllers\Admin\AuthController::class, 'showForgotPasswordForm'])->name('admin.password.request');
+Route::post('admin/forgot-password', [App\Http\Controllers\Admin\AuthController::class, 'sendResetLink'])->name('admin.password.email');
+Route::get('admin/reset-password/{token}', [App\Http\Controllers\Admin\AuthController::class, 'showResetForm'])->name('admin.password.reset');
+Route::post('admin/reset-password', [App\Http\Controllers\Admin\AuthController::class, 'resetPassword'])->name('admin.password.update');
+
+// Admin Protected Routes
+Route::group(['middleware' => ['admin.auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     
     // Banner Management
@@ -134,14 +146,20 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('reviews/{review}/toggle-status', [App\Http\Controllers\Admin\ReviewController::class, 'toggleStatus'])->name('reviews.toggle-status');
     Route::post('reviews/{review}/toggle-featured', [App\Http\Controllers\Admin\ReviewController::class, 'toggleFeatured'])->name('reviews.toggle-featured');
     Route::post('reviews/{review}/toggle-verified', [App\Http\Controllers\Admin\ReviewController::class, 'toggleVerified'])->name('reviews.toggle-verified');
-    
+
     // Calculator Management
     Route::resource('calculator', App\Http\Controllers\Admin\CalculatorController::class);
     Route::post('calculator/{setting}/toggle-status', [App\Http\Controllers\Admin\CalculatorController::class, 'toggleStatus'])->name('calculator.toggle-status');
     Route::post('calculator/reset-defaults', [App\Http\Controllers\Admin\CalculatorController::class, 'resetToDefaults'])->name('calculator.reset-defaults');
+    
+    // Logout route (protected)
+    Route::any('logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
+    
+    // Change Password routes (protected)
+    Route::get('change-password', [App\Http\Controllers\Admin\AuthController::class, 'showChangePasswordForm'])->name('change-password');
+    Route::post('change-password', [App\Http\Controllers\Admin\AuthController::class, 'changePassword'])->name('change-password.update');
 });
+   
 
-// Admin redirect route
-Route::get('/admin', function () {
-    return redirect()->route('staff.dashboard', ['locale' => app()->getLocale()]);
-})->middleware('staff');
+
+

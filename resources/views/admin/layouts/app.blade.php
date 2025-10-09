@@ -240,6 +240,21 @@
             font-size: 1.2rem;
         }
         
+        .logout-btn {
+            color: rgba(255, 255, 255, 0.8) !important;
+            transition: all 0.3s ease;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(255, 255, 255, 0.1) !important;
+            color: white !important;
+        }
+        
+        .logout-btn:focus {
+            box-shadow: none;
+            outline: none;
+        }
+        
         @media (max-width: 768px) {
             .sidebar {
                 transform: translateX(-100%);
@@ -300,6 +315,15 @@
                         <span>View Website</span>
                     </a>
                 </li>
+                <li class="nav-item mt-3">
+                    <form action="{{ route('admin.logout') }}" method="POST" class="d-inline w-100">
+                        @csrf
+                        <button type="submit" class="nav-link w-100 text-start border-0 bg-transparent logout-btn" onclick="return confirm('Are you sure you want to logout?')">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </button>
+                    </form>
+                </li>
             </ul>
         </nav>
     </div>
@@ -315,7 +339,18 @@
                 <h4 class="mb-0">@yield('page-title', 'Dashboard')</h4>
             </div>
             <div class="d-flex align-items-center">
-                <span class="text-muted">Welcome, Admin</span>
+                <span class="text-muted me-3">Welcome, {{ Auth::user()->name ?? 'Admin' }}</span>
+                <a href="{{ route('admin.change-password') }}" class="btn btn-outline-primary btn-sm me-2">
+                    <i class="fas fa-key me-1"></i>
+                    Change Password
+                </a>
+                <form action="{{ route('admin.logout') }}" method="POST" class="d-inline">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are you sure you want to logout?')">
+                        <i class="fas fa-sign-out-alt me-1"></i>
+                        Logout
+                    </button>
+                </form>
             </div>
         </div>
         

@@ -12,12 +12,18 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        $reviews = Review::with('customer')
-            ->where('status', 'active')
+        $reviews = Review::active()
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
-        return view('reviews.index', compact('reviews'));
+        // Calculate review statistics using the model's static methods
+        $stats = [
+            'total_reviews' => Review::getTotalReviews(),
+            'average_rating' => Review::getAverageRating() ? round(Review::getAverageRating(), 1) : 0,
+            'rating_counts' => Review::getRatingCounts()
+        ];
+
+        return view('frontend.reviews.index', compact('reviews', 'stats'));
     }
 
     /**
@@ -27,18 +33,24 @@ class ReviewController extends Controller
     {
         $request->validate([
             'rating' => 'required|integer|min:1|max:5',
-            'comment' => 'required|string|max:1000',
-            'customer_id' => 'required|exists:customers,id',
+            'review' => 'required|string|max:1000',
+            'name' => 'required|string|max:255',
+            'location' => 'nullable|string|max:255',
+            'service_type' => 'nullable|string|max:255',
         ]);
 
         Review::create([
-            'customer_id' => $request->customer_id,
+            'name' => $request->name,
+            'location' => $request->location,
             'rating' => $request->rating,
-            'comment' => $request->comment,
-            'status' => 'pending',
+            'review' => $request->review,
+            'service_type' => $request->service_type,
+            'is_active' => false, // Reviews need to be approved
+            'is_featured' => false,
+            'is_verified' => false,
         ]);
 
-        return redirect()->back()->with('success', 'Review submitted successfully!');
+        return redirect()->back()->with('success', 'Review submitted successfully! It will be published after approval.');
     }
 
     /**
@@ -46,11 +58,24 @@ class ReviewController extends Controller
      */
     public function getReviews(Request $request)
     {
-        $reviews = Review::with('customer')
-            ->where('status', 'active')
+        $reviews = Review::active()
             ->orderBy('created_at', 'desc')
             ->limit($request->get('limit', 10))
             ->get();
+
+        // Include stats if requested
+        if ($request->get('include_stats', false)) {
+            $stats = [
+                'total_reviews' => Review::getTotalReviews(),
+                'average_rating' => Review::getAverageRating() ? round(Review::getAverageRating(), 1) : 0,
+                'rating_counts' => Review::getRatingCounts()
+            ];
+
+            return response()->json([
+                'reviews' => $reviews,
+                'stats' => $stats
+            ]);
+        }
 
         return response()->json($reviews);
     }

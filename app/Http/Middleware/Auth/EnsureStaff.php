@@ -22,7 +22,7 @@ class EnsureStaff
                 return response()->json(['message' => 'Unauthenticated.'], 401);
             }
 
-            return redirect()->route('login', ['locale' => app()->getLocale()])->with('error', 'Please log in to access this page.');
+            return redirect()->route('login')->with('error', 'Please log in to access this page.');
         }
 
         $user = Auth::guard('staff')->user();
@@ -35,7 +35,7 @@ class EnsureStaff
                 return response()->json(['message' => 'Account deactivated.'], 403);
             }
 
-            return redirect()->route('login', ['locale' => app()->getLocale()])
+            return redirect()->route('login')
                 ->with('error', 'Your account has been deactivated. Please contact administrator.');
         }
 
