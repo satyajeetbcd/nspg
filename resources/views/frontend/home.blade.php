@@ -2851,7 +2851,8 @@ use Illuminate\Support\Facades\Storage;
 <script>
     // NEW SIMPLE CAROUSEL
     document.addEventListener('DOMContentLoaded', function() {
-        var newBannerCarousel = new bootstrap.Carousel(document.getElementById('newBannerCarousel'), {
+        // Initialize banner carousel
+        var bannerCarousel = new bootstrap.Carousel(document.getElementById('bannerCarousel'), {
             interval: 5000,
             wrap: true
         });
@@ -2952,6 +2953,7 @@ use Illuminate\Support\Facades\Storage;
         });
 
         // Solar Calculator functionality
+        console.log('Initializing calculator...');
         initializeCalculator();
     });
 
@@ -2960,6 +2962,12 @@ use Illuminate\Support\Facades\Storage;
         const monthlyBillInput = document.getElementById('monthlyBill');
         const inputTypeRadios = document.querySelectorAll('input[name="inputType"]');
         const tabButtons = document.querySelectorAll('.tab-btn');
+        
+        // Check if calculator elements exist
+        if (!monthlyBillInput) {
+            console.warn('Calculator input not found');
+            return;
+        }
         
         // Add event listeners
         monthlyBillInput.addEventListener('input', calculateSolar);
@@ -2980,50 +2988,78 @@ use Illuminate\Support\Facades\Storage;
     }
 
     function calculateSolar() {
-        const monthlyBill = parseFloat(document.getElementById('monthlyBill').value) || 0;
-        const inputType = document.querySelector('input[name="inputType"]:checked').value;
-        const activeTab = document.querySelector('.tab-btn.active').dataset.tab;
-        
-        // Get calculator settings from PHP
-        const calculatorSettings = @json($calculatorSettings ?? []);
-        
-        // Solar calculation parameters
-        const costPerUnit = calculatorSettings.cost_per_unit || 6; // ₹6 per unit
-        const unitsPerMonth = monthlyBill / costPerUnit;
-        const unitsPerYear = unitsPerMonth * 12;
-        
-        // System sizing
-        const unitsPerKwPerMonth = calculatorSettings.units_per_kw_per_month || 120;
-        const systemSize = Math.ceil(unitsPerMonth / unitsPerKwPerMonth);
-        const actualSystemSize = Math.max(1, systemSize);
-        
-        // Calculations
-        const annualSavings = monthlyBill * 12;
-        const annualEnergy = actualSystemSize * unitsPerKwPerMonth * 12;
-        const spacePerKw = calculatorSettings.space_per_kw || 80;
-        const spaceRequired = actualSystemSize * spacePerKw;
-        
-        // Cost calculations
-        const costPerWatt = calculatorSettings.cost_per_watt || 50;
-        const basePrice = actualSystemSize * 1000 * costPerWatt;
-        const subsidyPerWatt = calculatorSettings.subsidy_per_watt || 20;
-        const maxSubsidy = calculatorSettings.max_subsidy || 75000;
-        const subsidy = Math.min(actualSystemSize * 1000 * subsidyPerWatt, maxSubsidy);
-        const nspgDiscountPercentage = calculatorSettings.nspg_discount_percentage || 10;
-        const maxNspgDiscount = calculatorSettings.max_nspg_discount || 22000;
-        const nspgDiscount = Math.min(basePrice * (nspgDiscountPercentage / 100), maxNspgDiscount);
-        const projectCost = basePrice - subsidy - nspgDiscount;
-        
-        // Update results
-        document.getElementById('systemSize').textContent = actualSystemSize + ' kW';
-        document.getElementById('annualSavings').textContent = '₹' + annualSavings.toLocaleString();
-        document.getElementById('annualEnergy').textContent = annualEnergy.toLocaleString() + ' Units';
-        document.getElementById('spaceRequired').textContent = spaceRequired + ' Sqft';
-        
-        // Update cost breakdown
-        document.getElementById('basePrice').textContent = '₹' + basePrice.toLocaleString();
-        document.getElementById('discount').textContent = '(₹' + subsidy.toLocaleString() + ' + ₹' + nspgDiscount.toLocaleString() + ')';
-        document.getElementById('projectCost').textContent = '= ₹' + projectCost.toLocaleString() + ' (*Tax Extra)';
+        try {
+            console.log('calculateSolar called');
+            const monthlyBillInput = document.getElementById('monthlyBill');
+            const inputTypeRadios = document.querySelectorAll('input[name="inputType"]:checked');
+            const activeTabElement = document.querySelector('.tab-btn.active');
+            
+            console.log('Elements found:', {
+                monthlyBillInput: !!monthlyBillInput,
+                inputTypeRadios: inputTypeRadios.length,
+                activeTabElement: !!activeTabElement
+            });
+            
+            if (!monthlyBillInput || inputTypeRadios.length === 0 || !activeTabElement) {
+                console.warn('Calculator elements not found');
+                return;
+            }
+            
+            const monthlyBill = parseFloat(monthlyBillInput.value) || 0;
+            const inputType = inputTypeRadios[0].value;
+            const activeTab = activeTabElement.dataset.tab;
+            
+            // Get calculator settings from PHP
+            const calculatorSettings = @json($calculatorSettings ?? []);
+            console.log('Calculator settings:', calculatorSettings);
+            
+            // Solar calculation parameters
+            const costPerUnit = calculatorSettings.cost_per_unit || 6; // ₹6 per unit
+            const unitsPerMonth = monthlyBill / costPerUnit;
+            const unitsPerYear = unitsPerMonth * 12;
+            
+            // System sizing
+            const unitsPerKwPerMonth = calculatorSettings.units_per_kw_per_month || 120;
+            const systemSize = Math.ceil(unitsPerMonth / unitsPerKwPerMonth);
+            const actualSystemSize = Math.max(1, systemSize);
+            
+            // Calculations
+            const annualSavings = monthlyBill * 12;
+            const annualEnergy = actualSystemSize * unitsPerKwPerMonth * 12;
+            const spacePerKw = calculatorSettings.space_per_kw || 80;
+            const spaceRequired = actualSystemSize * spacePerKw;
+            
+            // Cost calculations
+            const costPerWatt = calculatorSettings.cost_per_watt || 50;
+            const basePrice = actualSystemSize * 1000 * costPerWatt;
+            const subsidyPerWatt = calculatorSettings.subsidy_per_watt || 20;
+            const maxSubsidy = calculatorSettings.max_subsidy || 75000;
+            const subsidy = Math.min(actualSystemSize * 1000 * subsidyPerWatt, maxSubsidy);
+            const nspgDiscountPercentage = calculatorSettings.nspg_discount_percentage || 10;
+            const maxNspgDiscount = calculatorSettings.max_nspg_discount || 22000;
+            const nspgDiscount = Math.min(basePrice * (nspgDiscountPercentage / 100), maxNspgDiscount);
+            const projectCost = basePrice - subsidy - nspgDiscount;
+            
+            // Update results
+            const systemSizeEl = document.getElementById('systemSize');
+            const annualSavingsEl = document.getElementById('annualSavings');
+            const annualEnergyEl = document.getElementById('annualEnergy');
+            const spaceRequiredEl = document.getElementById('spaceRequired');
+            const basePriceEl = document.getElementById('basePrice');
+            const discountEl = document.getElementById('discount');
+            const projectCostEl = document.getElementById('projectCost');
+            
+            if (systemSizeEl) systemSizeEl.textContent = actualSystemSize + ' kW';
+            if (annualSavingsEl) annualSavingsEl.textContent = '₹' + annualSavings.toLocaleString();
+            if (annualEnergyEl) annualEnergyEl.textContent = annualEnergy.toLocaleString() + ' Units';
+            if (spaceRequiredEl) spaceRequiredEl.textContent = spaceRequired + ' Sqft';
+            if (basePriceEl) basePriceEl.textContent = '₹' + basePrice.toLocaleString();
+            if (discountEl) discountEl.textContent = '(₹' + subsidy.toLocaleString() + ' + ₹' + nspgDiscount.toLocaleString() + ')';
+            if (projectCostEl) projectCostEl.textContent = '= ₹' + projectCost.toLocaleString() + ' (*Tax Extra)';
+            
+        } catch (error) {
+            console.error('Error in calculateSolar:', error);
+        }
     }
 
     function bookConsultation() {
