@@ -1383,9 +1383,11 @@ use Illuminate\Support\Facades\Storage;
                         
                         <!-- CTA Button -->
                         <div class="calculator-cta">
-                            <button class="btn btn-primary btn-lg" onclick="bookConsultation()">
-                                {{ $calculatorSettings['cta_button_text'] ?? 'Book Free Consultation' }}
+                            <a href="{{ route('contact') }}">
+                            <button class="btn btn-primary btn-lg">
+                                {{ 'Book Free Consultation' }}
                             </button>
+                            </a>
                         </div>
                     </div>
                 </div>
