@@ -291,12 +291,17 @@ use Illuminate\Support\Facades\Storage;
 /* Responsive Design */
 @media (max-width: 768px) {
     .banner-slider-section {
-        padding-top: 1px; /* More space for larger mobile navbar */
+        padding-top: 80px; /* Space for fixed navbar */
     }
     
     .banner-slide {
-        min-height: calc(170vh - 100px); /* Adjust for navbar height */
+        min-height: 100vh;
         padding: 20px 0;
+    }
+    
+    .banner-content {
+        text-align: center;
+        padding: 1rem 0;
     }
     
     .hero-image {
@@ -311,26 +316,54 @@ use Illuminate\Support\Facades\Storage;
     
     .company-name {
         font-size: 2.5rem;
+        text-align: center;
     }
     
     .private-limited {
         font-size: 1.2rem;
+        text-align: center;
     }
     
     .banner-slogan h2 {
         font-size: 2rem;
+        text-align: center;
     }
     
     .scheme-banner {
         flex-direction: column;
         gap: 10px;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
     
     .scheme-yellow,
     .scheme-blue {
         margin-right: 0;
         margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .benefits-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 2rem;
+    }
+    
+    .feature-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+    
+    .feature-item i {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
     }
     
     .carousel-control-prev,
@@ -350,11 +383,11 @@ use Illuminate\Support\Facades\Storage;
 
 @media (max-width: 576px) {
     .banner-slider-section {
-        padding-top: 1px; /* Extra space for mobile navbar */
+        padding-top: 80px;
     }
     
     .banner-slide {
-        min-height: calc(170vh - 120px);
+        min-height: 100vh;
         padding: 15px 0;
     }
     
@@ -375,17 +408,18 @@ use Illuminate\Support\Facades\Storage;
     }
     
     .company-name {
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-align: center;
+        line-height: 1.1;
     }
     
     .private-limited {
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-align: center;
     }
     
     .banner-slogan h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         text-align: center;
     }
     
@@ -399,8 +433,21 @@ use Illuminate\Support\Facades\Storage;
     .scheme-yellow,
     .scheme-blue {
         padding: 8px 16px;
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin: 0;
+        width: 100%;
+    }
+    
+    .benefits-features {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 1.5rem;
+    }
+    
+    .feature-item {
+        padding: 8px;
+        font-size: 0.9rem;
     }
     
     .carousel-control-prev,
@@ -586,6 +633,174 @@ use Illuminate\Support\Facades\Storage;
         margin-top: 4px;
     }
 }
+
+/* Additional Mobile Optimizations */
+@media (max-width: 768px) {
+    /* Improve touch targets */
+    .btn {
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+    
+    /* Better spacing for mobile */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Improve readability */
+    .lead {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    /* Better form controls */
+    .form-control {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 12px 15px;
+    }
+    
+    /* Improve carousel on mobile */
+    .carousel-indicators {
+        bottom: 15px;
+    }
+    
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px;
+    }
+    
+    /* Better mobile navigation */
+    .navbar-toggler {
+        border: none;
+        padding: 4px 8px;
+    }
+    
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    /* Benefit cards mobile styling */
+    .benefit-card {
+        padding: 20px;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .benefit-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--primary-orange), var(--primary-orange-light));
+        border-radius: 50%;
+    }
+    
+    .benefit-icon i {
+        font-size: 1.5rem;
+        color: white;
+    }
+    
+    .benefit-card h4 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: var(--text-dark);
+    }
+    
+    .benefit-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--text-light);
+    }
+}
+
+@media (max-width: 576px) {
+    /* Extra small screen optimizations */
+    .btn {
+        min-height: 40px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .form-control {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+    
+    /* Smaller carousel controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .carousel-control-prev {
+        left: 5px;
+    }
+    
+    .carousel-control-next {
+        right: 5px;
+    }
+    
+    .carousel-indicators {
+        bottom: 10px;
+    }
+    
+    .carousel-indicators button {
+        width: 8px;
+        height: 8px;
+        margin: 0 2px;
+    }
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+    .banner-slide {
+        min-height: 80vh;
+    }
+    
+    .banner-content {
+        padding: 0.5rem 0;
+    }
+    
+    .hero-image {
+        margin-top: 1rem;
+    }
+    
+    .company-name {
+        font-size: 2rem;
+    }
+    
+    .banner-slogan h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-image img,
+    .service-image img,
+    .project-image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
 </style>
 
 
@@ -609,7 +824,7 @@ use Illuminate\Support\Facades\Storage;
                     <div class="banner-overlay"></div>
                     <div class="container">
                         <div class="row align-items-center min-vh-100">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="banner-content marginset">
                                     <!-- Government Logos -->
                                     <div class="government-logos mb-4">
@@ -668,13 +883,18 @@ use Illuminate\Support\Facades\Storage;
                                         </div>
                                     </div>
                                     
-                                  
+                                    <!-- Mobile CTA Button -->
+                                    <div class="d-lg-none mt-4">
+                                        <a href="{{ route('contact') }}" class="btn btn-warning btn-lg w-100">
+                                            <i class="fas fa-phone me-2"></i>
+                                            Get Free Quote
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="hero-image">
-                                 
-                                <img src="{{ asset($banners[0]->image_path) }}" 
+                                    <img src="{{ asset($banners[0]->image_path) }}" 
                                          alt="Solar Panels" class="img-fluid">
                                 </div>
                             </div>
@@ -690,7 +910,7 @@ use Illuminate\Support\Facades\Storage;
                     <div class="banner-overlay"></div>
                     <div class="container">
                         <div class="row align-items-center min-vh-100">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="banner-content marginset">
                                     <span class="hero-badge">Leading Solar Solutions</span>
                                     <h1 class="hero-title">
@@ -701,7 +921,7 @@ use Illuminate\Support\Facades\Storage;
                                     <p class="hero-description">
                                         We provide innovative solar energy solutions that help you save money while protecting the environment. Join thousands of satisfied customers who have made the switch to clean energy.
                                     </p>
-                                    <div class="hero-buttons">
+                                    <div class="hero-buttons d-none d-lg-block">
                                         <a href="{{ route('services') }}" class="btn btn-primary btn-lg me-3">
                                             <i class="fas fa-solar-panel me-2"></i>
                                             Our Services
@@ -711,7 +931,7 @@ use Illuminate\Support\Facades\Storage;
                                             Get Quote
                                         </a>
                                     </div>
-                                    <div class="hero-stats">
+                                    <div class="hero-stats d-none d-lg-flex">
                                         <div class="stat-item">
                                             <h3>25+</h3>
                                             <p>Years Experience</p>
@@ -725,9 +945,21 @@ use Illuminate\Support\Facades\Storage;
                                             <p>Happy Clients</p>
                                         </div>
                                     </div>
+                                    
+                                    <!-- Mobile CTA Button -->
+                                    <div class="d-lg-none mt-4">
+                                        <a href="{{ route('contact') }}" class="btn btn-warning btn-lg w-100 mb-3">
+                                            <i class="fas fa-phone me-2"></i>
+                                            Get Free Quote
+                                        </a>
+                                        <a href="{{ route('services') }}" class="btn btn-outline-light btn-lg w-100">
+                                            <i class="fas fa-solar-panel me-2"></i>
+                                            Our Services
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="hero-image">
                                     <img src="{{ asset($banners[1]->image_path) }}" 
                                          alt="Solar Panels" class="img-fluid">
@@ -745,7 +977,7 @@ use Illuminate\Support\Facades\Storage;
                     <div class="banner-overlay"></div>
                     <div class="container">
                         <div class="row align-items-center min-vh-100">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="banner-content marginset">
                                     <span class="hero-badge">Sustainable Future</span>
                                     <h1 class="hero-title">
@@ -755,7 +987,7 @@ use Illuminate\Support\Facades\Storage;
                                     <p class="hero-description">
                                         Make the switch to renewable energy and contribute to a sustainable future. Our solar solutions are designed to meet your energy needs while reducing your carbon footprint.
                                     </p>
-                                    <div class="hero-buttons">
+                                    <div class="hero-buttons d-none d-lg-block">
                                         <a href="{{ route('about') }}" class="btn btn-primary btn-lg me-3">
                                             <i class="fas fa-info-circle me-2"></i>
                                             Learn More
@@ -779,9 +1011,21 @@ use Illuminate\Support\Facades\Storage;
                                             <span>24/7 Support</span>
                                         </div>
                                     </div>
+                                    
+                                    <!-- Mobile CTA Button -->
+                                    <div class="d-lg-none mt-4">
+                                        <a href="{{ route('contact') }}" class="btn btn-warning btn-lg w-100 mb-3">
+                                            <i class="fas fa-phone me-2"></i>
+                                            Contact Us
+                                        </a>
+                                        <a href="{{ route('about') }}" class="btn btn-outline-light btn-lg w-100">
+                                            <i class="fas fa-info-circle me-2"></i>
+                                            Learn More
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="hero-image">
                                     <img src="{{ asset($banners[2]->image_path) }}" 
                                          alt="Solar Farm" class="img-fluid">
@@ -807,7 +1051,7 @@ use Illuminate\Support\Facades\Storage;
 <section class="about-section py-5">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
                 <div class="about-content">
                     <span class="section-badge">About NSPG</span>
                     <h2 class="section-title">Leading EPC Company in Solar Energy</h2>
@@ -861,18 +1105,20 @@ use Illuminate\Support\Facades\Storage;
                             </div>
                         </div>
                     </div>
-                    <a href="{{ route('about') }}" class="btn btn-primary">
-                        Learn More <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
+                    <div class="text-center text-lg-start">
+                        <a href="{{ route('about') }}" class="btn btn-primary">
+                            Learn More <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
                 <div class="about-images">
                     <div class="main-image">
                         <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
                              alt="Solar Installation" class="img-fluid">
                     </div>
-                    <div class="floating-card">
+                    <div class="floating-card d-none d-lg-block">
                         <div class="card-content">
                             <h4>500+</h4>
                             <p>Projects Completed</p>
@@ -894,7 +1140,7 @@ use Illuminate\Support\Facades\Storage;
         </div>
         
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
                         <img src="/images/services/epc-services.svg" alt="NSPG EPC Services" class="img-fluid">
@@ -907,7 +1153,7 @@ use Illuminate\Support\Facades\Storage;
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
                         <img src="/images/services/solar-finance.svg" alt="Solar Finance Solutions" class="img-fluid">
@@ -920,7 +1166,7 @@ use Illuminate\Support\Facades\Storage;
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
                         <img src="/images/services/operations-maintenance.svg" alt="Operations & Maintenance" class="img-fluid">
@@ -933,7 +1179,7 @@ use Illuminate\Support\Facades\Storage;
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
                         <img src="/images/services/rooftop-solar.svg" alt="Rooftop Solar Solutions" class="img-fluid">
@@ -946,7 +1192,7 @@ use Illuminate\Support\Facades\Storage;
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
                         <img src="/images/services/ground-mounted-solar.svg" alt="Ground-Mounted Solar" class="img-fluid">
@@ -959,7 +1205,7 @@ use Illuminate\Support\Facades\Storage;
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
                         <img src="/images/services/high-roi-solutions.svg" alt="High ROI Solutions" class="img-fluid">
@@ -985,7 +1231,7 @@ use Illuminate\Support\Facades\Storage;
         </div>
         
         <div class="row">
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 col-md-12 mb-4">
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="fas fa-rupee-sign"></i>
@@ -995,7 +1241,7 @@ use Illuminate\Support\Facades\Storage;
                 </div>
             </div>
             
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 col-md-12 mb-4">
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="fas fa-chart-line"></i>
@@ -1005,7 +1251,7 @@ use Illuminate\Support\Facades\Storage;
                 </div>
             </div>
             
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 col-md-12 mb-4">
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="fas fa-bolt"></i>
@@ -1015,7 +1261,7 @@ use Illuminate\Support\Facades\Storage;
                 </div>
             </div>
             
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 col-md-12 mb-4">
                 <div class="benefit-card">
                     <div class="benefit-icon">
                         <i class="fas fa-battery-full"></i>
@@ -1152,7 +1398,7 @@ use Illuminate\Support\Facades\Storage;
 <section class="why-choose-section py-5">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
                 <div class="why-choose-content">
                     <span class="section-badge">Why Choose Us</span>
                     <h2 class="section-title">Excellence in Every Project</h2>
@@ -1188,7 +1434,7 @@ use Illuminate\Support\Facades\Storage;
                 </div>
             </div>
             
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
                 <div class="why-choose-image">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
                          alt="Solar Installation" class="img-fluid">
@@ -1210,7 +1456,7 @@ use Illuminate\Support\Facades\Storage;
         </div>
         
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
@@ -1228,7 +1474,7 @@ use Illuminate\Support\Facades\Storage;
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
@@ -1246,7 +1492,7 @@ use Illuminate\Support\Facades\Storage;
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
@@ -1706,6 +1952,56 @@ use Illuminate\Support\Facades\Storage;
 /* Services Section */
 .services-section {
     padding: 100px 0;
+}
+
+/* Benefit Cards */
+.benefit-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-orange), var(--primary-orange-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.benefit-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.benefit-card h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.benefit-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
 }
 
 .service-card {
@@ -2325,6 +2621,229 @@ use Illuminate\Support\Facades\Storage;
     .projects-section,
     .testimonials-section {
         padding: 60px 0;
+    }
+    
+    /* About Section Mobile */
+    .about-content {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .about-features {
+        margin-bottom: 2rem;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .feature-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .achievements {
+        margin-bottom: 2rem;
+    }
+    
+    .achievement-item {
+        margin-bottom: 1rem;
+    }
+    
+    .achievement-number {
+        font-size: 2rem;
+    }
+    
+    /* Services Section Mobile */
+    .service-card {
+        margin-bottom: 2rem;
+        padding: 30px 20px;
+    }
+    
+    .service-image {
+        height: 180px;
+        margin-bottom: 15px;
+    }
+    
+    .service-card h4 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    
+    .service-card p {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+    
+    /* Why Choose Section Mobile */
+    .why-choose-content {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .why-choose-features .feature-item {
+        flex-direction: row;
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+    
+    .feature-number {
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+    
+    /* Projects Section Mobile */
+    .project-card {
+        margin-bottom: 2rem;
+    }
+    
+    .project-image img {
+        height: 200px;
+    }
+    
+    .project-content {
+        padding: 15px;
+    }
+    
+    .project-content h5 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    /* Testimonials Mobile */
+    .testimonial-item {
+        padding: 20px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .quote-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .avatar-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    /* Calculator Mobile */
+    .calculator-container {
+        margin: 0 10px;
+    }
+    
+    .calculator-content {
+        padding: 20px;
+    }
+    
+    .calculator-header {
+        padding: 20px;
+    }
+    
+    .calculator-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .result-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .result-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .cost-breakdown {
+        padding: 15px;
+    }
+    
+    .cost-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .input-toggle {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-section,
+    .services-section,
+    .why-choose-section,
+    .projects-section,
+    .testimonials-section {
+        padding: 40px 0;
+    }
+    
+    /* Extra small screens */
+    .service-card {
+        padding: 20px 15px;
+    }
+    
+    .service-image {
+        height: 150px;
+    }
+    
+    .achievement-number {
+        font-size: 1.5rem;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+    
+    .feature-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .project-image img {
+        height: 180px;
+    }
+    
+    .testimonial-item {
+        padding: 15px;
+    }
+    
+    .calculator-content {
+        padding: 15px;
+    }
+    
+    .calculator-header {
+        padding: 15px;
+    }
+    
+    .calculator-header h3 {
+        font-size: 1.3rem;
     }
 }
 </style>

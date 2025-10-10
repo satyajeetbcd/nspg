@@ -48,45 +48,205 @@
         .navbar {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 0.5rem 0;
+            min-height: 60px;
         }
         
         /* Mobile navbar adjustments */
         @media (max-width: 768px) {
             .navbar {
-                padding: 0.5rem 0;
+                padding: 0.25rem 0;
+                min-height: 50px;
+            }
+            
+            .navbar-toggler {
+                display: block !important;
+                border: 2px solid rgba(255, 255, 255, 0.5);
+                background: rgba(255, 255, 255, 0.15);
+                padding: 6px 10px;
+            }
+            
+            .navbar-toggler:focus {
+                box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
             }
             
             .navbar-collapse {
-                background: rgba(30, 58, 138, 0.95);
-                margin-top: 10px;
-                padding: 15px;
-                border-radius: 10px;
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+                margin-top: 15px;
+                padding: 25px 20px;
+                border-radius: 20px;
+                backdrop-filter: blur(15px);
+                border: 2px solid rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .navbar-collapse::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.05"/><circle cx="10" cy="60" r="0.5" fill="%23ffffff" opacity="0.05"/><circle cx="90" cy="40" r="0.5" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+                pointer-events: none;
+                z-index: 1;
             }
             
             .navbar-nav {
                 text-align: center;
+                position: relative;
+                z-index: 2;
             }
             
             .nav-item {
-                margin: 5px 0;
+                margin: 12px 0;
+            }
+            
+            .nav-link {
+                padding: 15px 25px !important;
+                border-radius: 12px;
+                transition: all 0.3s ease;
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #1f2937 !important;
+                text-decoration: none;
+                display: block;
+                position: relative;
+                overflow: hidden;
+                background: rgba(255, 255, 255, 0.7);
+                border: 1px solid rgba(0, 0, 0, 0.05);
+            }
+            
+            .nav-link::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+                transition: left 0.5s ease;
+            }
+            
+            .nav-link:hover::before {
+                left: 100%;
+            }
+            
+            .nav-link:hover {
+                background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
+                color: #ff6b35 !important;
+                border-color: rgba(255, 107, 53, 0.2);
             }
             
             .nav-link.btn {
-                margin: 10px 0 !important;
-                display: inline-block;
+                margin: 20px 0 !important;
+                display: block;
+                width: 100%;
+                padding: 18px 25px !important;
+                font-size: 1.2rem;
+                font-weight: 600;
+                border-radius: 15px;
+                background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+                border: none !important;
+                box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+                transition: all 0.3s ease;
+                position: relative;
+                z-index: 2;
+            }
+            
+            .nav-link.btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+                background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+                color: white !important;
             }
         }
         
         @media (max-width: 576px) {
             .navbar {
-                padding: 0.25rem 0;
+                padding: 0.2rem 0;
+                min-height: 45px;
+            }
+            
+            .navbar-toggler {
+                display: block !important;
+                border: 2px solid rgba(255, 255, 255, 0.6);
+                background: rgba(255, 255, 255, 0.2);
+                padding: 5px 8px;
+                font-size: 0.9rem;
+            }
+            
+            .navbar-toggler-icon {
+                width: 20px;
+                height: 20px;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
             }
             
             .navbar-collapse {
-                background: rgba(30, 58, 138, 0.95);
-                margin-top: 5px;
-                padding: 10px;
-                border-radius: 8px;
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+                margin-top: 10px;
+                padding: 20px 15px;
+                border-radius: 18px;
+                backdrop-filter: blur(15px);
+                border: 2px solid rgba(0, 0, 0, 0.1);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .navbar-collapse::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.05"/><circle cx="10" cy="60" r="0.5" fill="%23ffffff" opacity="0.05"/><circle cx="90" cy="40" r="0.5" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+                pointer-events: none;
+                z-index: 1;
+            }
+            
+            .nav-link {
+                padding: 12px 20px !important;
+                font-size: 1rem;
+                font-weight: 600;
+                color: #1f2937 !important;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+                position: relative;
+                z-index: 2;
+                background: rgba(255, 255, 255, 0.7);
+                border: 1px solid rgba(0, 0, 0, 0.05);
+            }
+            
+            .nav-link:hover {
+                background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(255, 107, 53, 0.2);
+                color: #ff6b35 !important;
+                border-color: rgba(255, 107, 53, 0.2);
+            }
+            
+            .nav-link.btn {
+                padding: 15px 20px !important;
+                font-size: 1.1rem;
+                font-weight: 600;
+                background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+                border: none !important;
+                box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+                border-radius: 12px;
+                margin: 15px 0 !important;
+            }
+            
+            .nav-link.btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+                background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+                color: white !important;
             }
         }
         
@@ -96,8 +256,70 @@
             color: white !important;
         }
         
+        /* Mobile Menu Toggle Button */
+        .navbar-toggler {
+            border: 2px solid rgba(255, 255, 255, 0.8) !important;
+            border-radius: 8px !important;
+            padding: 8px 12px !important;
+            background: rgba(255, 255, 255, 0.2) !important;
+            transition: all 0.3s ease !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            z-index: 1051 !important;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .navbar-toggler:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            width: 24px;
+            height: 24px;
+        }
+        
+        /* Ensure mobile menu button is always visible on mobile */
+        @media (max-width: 991.98px) {
+            .navbar-toggler {
+                display: block !important;
+                z-index: 1050;
+                position: relative;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .navbar-toggler {
+                display: none !important;
+            }
+        }
+        
+        /* Force mobile menu button visibility */
+        .navbar-toggler {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* Ensure mobile menu icon is dark colored */
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        }
+        
+        @media (min-width: 992px) {
+            .navbar-toggler {
+                display: none !important;
+            }
+        }
+        
         .navbar-brand img {
-            max-height: 90px;
+            max-height: 100px;
             width: auto;
             object-fit: contain;
             transition: transform 0.3s ease;
@@ -117,28 +339,129 @@
         /* Responsive logo sizing */
         @media (max-width: 768px) {
             .navbar-brand {
-                justify-content: center;
-                width: 100%;
-                margin: 0 auto;
+                justify-content: flex-start;
+                width: auto;
+                margin: 0;
             }
             
             .navbar-brand img {
-                max-height: 100px; /* Increased by 25% from 80px */
+                max-height: 100px;
             }
         }
         
         @media (max-width: 576px) {
             .navbar-brand {
-                justify-content: center;
-                width: 100%;
-                margin: 0 auto;
+                justify-content: flex-start;
+                width: auto;
+                margin: 0;
             }
             
             .navbar-brand img {
-                max-height: 88px; /* Increased by 25% from 70px */
+                max-height: 100px;
             }
         }
         
+        /* Orange Button Styles - Default Colors */
+        .btn {
+            background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+            color: white !important;
+            border: 2px solid #ff6b35 !important;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+            color: white !important;
+            border: 2px solid #ff6b35 !important;
+        }
+        
+        .btn-warning {
+            background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+            color: white !important;
+            border: 2px solid #ff6b35 !important;
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+            color: white !important;
+            border: 2px solid #ff6b35 !important;
+        }
+        
+        .btn-info {
+            background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+            color: white !important;
+            border: 2px solid #ff6b35 !important;
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+            color: white !important;
+            border: 2px solid #ff6b35 !important;
+        }
+        
+        .btn-dark {
+            background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+            color: white !important;
+            border: 2px solid #ff6b35 !important;
+        }
+        
+        .btn-light {
+            background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+            color: white !important;
+            border: 2px solid #ff6b35 !important;
+        }
+        
+        /* Button Hover Effects */
+        .btn:hover {
+            background: linear-gradient(135deg, #f7931e, #ff6b35) !important;
+            color: white !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+            border-color: #f7931e !important;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #f7931e, #ff6b35) !important;
+            color: white !important;
+            border-color: #f7931e !important;
+        }
+        
+        .btn-warning:hover {
+            background: linear-gradient(135deg, #f7931e, #ff6b35) !important;
+            color: white !important;
+            border-color: #f7931e !important;
+        }
+        
+        .btn-success:hover {
+            background: linear-gradient(135deg, #f7931e, #ff6b35) !important;
+            color: white !important;
+            border-color: #f7931e !important;
+        }
+        
+        .btn-info:hover {
+            background: linear-gradient(135deg, #f7931e, #ff6b35) !important;
+            color: white !important;
+            border-color: #f7931e !important;
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #f7931e, #ff6b35) !important;
+            color: white !important;
+            border-color: #f7931e !important;
+        }
+        
+        .btn-dark:hover {
+            background: linear-gradient(135deg, #f7931e, #ff6b35) !important;
+            color: white !important;
+            border-color: #f7931e !important;
+        }
+        
+        .btn-light:hover {
+            background: linear-gradient(135deg, #f7931e, #ff6b35) !important;
+            color: white !important;
+            border-color: #f7931e !important;
+        }
+
         /* WhatsApp Floating Button */
         .whatsapp-float {
             position: fixed;
@@ -216,15 +539,35 @@
         
         .nav-link {
             color: white !important;
-            font-weight: 500;
+            font-weight: 600;
             transition: all 0.3s ease;
-            padding: 0.5rem 0.75rem !important;
-            font-size: 0.9rem;
+            padding: 0.6rem 1rem !important;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .nav-link:hover::before {
+            left: 100%;
         }
         
         .nav-link:hover {
             color: var(--accent-yellow) !important;
             transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
         /* Navigation spacing for longer menu */
@@ -641,14 +984,13 @@
 </div> -->
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
                 <img src="/images/new-1.png" alt="NSPG Logo" height="100" class="me-3">
-                
             </a>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
@@ -678,8 +1020,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-lg-block d-none">
                         <a class="nav-link btn btn-warning text-dark fw-bold ms-2" href="{{ route('contact') }}">
+                            <i class="fas fa-phone me-1"></i>
+                            Contact Now
+                        </a>
+                    </li>
+                    <!-- Mobile Contact Button -->
+                    <li class="nav-item d-lg-none mt-3">
+                        <a class="nav-link btn btn-warning text-dark fw-bold w-100 text-center" href="{{ route('contact') }}">
                             <i class="fas fa-phone me-1"></i>
                             Contact Now
                         </a>
@@ -785,6 +1134,35 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure mobile menu button is visible
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            if (navbarToggler) {
+                navbarToggler.style.display = 'block';
+                navbarToggler.style.visibility = 'visible';
+                navbarToggler.style.opacity = '1';
+            }
+            
+            // Mobile menu toggle functionality
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Close mobile menu when clicking on a link
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                            toggle: false
+                        });
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        });
+    </script>
     
     @stack('scripts')
     
