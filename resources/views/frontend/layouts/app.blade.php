@@ -467,7 +467,7 @@
             position: fixed;
             width: 60px;
             height: 60px;
-            bottom: 20px;
+            bottom: 100px;
             right: 20px;
             background-color: #25d366;
             color: white;
@@ -475,7 +475,7 @@
             text-align: center;
             font-size: 30px;
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
+            z-index: 10000;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
@@ -513,7 +513,7 @@
             .whatsapp-float {
                 width: 55px;
                 height: 55px;
-                bottom: 15px;
+                bottom: 90px;
                 right: 15px;
                 font-size: 25px;
             }
@@ -527,7 +527,7 @@
             .whatsapp-float {
                 width: 50px;
                 height: 50px;
-                bottom: 10px;
+                bottom: 85px;
                 right: 10px;
                 font-size: 22px;
             }
@@ -1009,7 +1009,7 @@
                         <a class="nav-link" href="{{ route('our-clients') }}">Our Clients</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('board-of-directors') }}">Board of Directors</a>
+                        <a class="nav-link" href="{{ route('calculator') }}">NSPG Calculator</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('business-and-partnership') }}">Partnership</a>

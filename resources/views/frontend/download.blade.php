@@ -236,7 +236,7 @@
                     </div>
                     <h4 class="link-title">Meet Our Team</h4>
                     <p class="link-description">Get to know the experts behind NSPG's success.</p>
-                    <a href="{{ route('board-of-directors') }}" class="btn btn-link">Meet Team</a>
+                    <a href="{{ route('calculator') }}" class="btn btn-link">NSPG Calculator</a>
                 </div>
             </div>
             

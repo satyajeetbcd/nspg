@@ -44,12 +44,13 @@ class FrontendController extends Controller
         return view('frontend.services', compact('solarSystems', 'pageContents', 'contactInfos'));
     }
 
-    public function boardOfDirectors()
+    public function calculator()
     {
         $pageContents = PageContent::active()->get()->keyBy('page_key');
         $contactInfos = ContactInfo::active()->ordered()->get();
+        $calculatorSettings = CalculatorSetting::getAllSettings();
         
-        return view('frontend.board-of-directors', compact('pageContents', 'contactInfos'));
+        return view('frontend.calculator', compact('pageContents', 'contactInfos', 'calculatorSettings'));
     }
 
     public function businessAndPartnership()

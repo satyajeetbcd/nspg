@@ -54,6 +54,84 @@
     </div>
 </section>
 
+<!-- About NSPG Section -->
+<section class="py-5 about-nspg-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5">
+                <div class="about-content">
+                    <span class="section-badge">About NSPG</span>
+                    <h2 class="section-title">Leading EPC Company in Solar Energy</h2>
+                    <p class="section-description">
+                        Nirmala Solar Power Generation Pvt. Ltd. (NSPG) is an EPC (Engineering, Procurement, and Construction) company established in 2015, dedicated to delivering solar solutions for both rooftop and ground-mounted installations. We harness solar energy efficiently and cost-effectively, offering environmentally friendly and energy-efficient solutions that provide a high return on investment.
+                    </p>
+                    
+                    <!-- Company Achievements -->
+                    <div class="achievements mb-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="achievement-item text-center">
+                                    <h3 class="achievement-number">500+</h3>
+                                    <p class="achievement-label">Residential Projects</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="achievement-item text-center">
+                                    <h3 class="achievement-number">2015</h3>
+                                    <p class="achievement-label">Established</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h5>EPC Services</h5>
+                                <p>Complete Engineering, Procurement, and Construction services</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h5>OEM in UP</h5>
+                                <p>Original Equipment Manufacturer in Uttar Pradesh</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h5>High ROI</h5>
+                                <p>Solutions providing high return on investment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-images">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             alt="Solar Installation" class="img-fluid">
+                    </div>
+                    <div class="floating-card d-none d-lg-block">
+                        <div class="card-content">
+                            <h4>500+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Company Story Section -->
 <section class="py-5 company-story-section">
     <div class="container">
@@ -65,7 +143,7 @@
                     </div>
                     <h2 class="section-title mb-4">Our Story</h2>
                     <p class="story-text mb-4">
-                        Established in 2017, NSPG prides itself as a pioneer in developing green energy solutions that are environmentally friendly, energy-efficient, and capable of delivering a quick return on investment. The company focuses on installing solar panels on rooftops across the country, achieving better value for money.
+                        Established in 2015, NSPG prides itself as a pioneer in developing green energy solutions that are environmentally friendly, energy-efficient, and capable of delivering a quick return on investment. The company focuses on installing solar panels on rooftops across the country, achieving better value for money.
                     </p>
                     <p class="story-text mb-4">
                         Nirmala Solar Power Generation Pvt. Ltd. (NSPG) is committed to enabling solar energy access everywhere, bringing the power of the sun to people in the most efficient and cost-effective way possible.
@@ -97,6 +175,163 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Board Members Section -->
+<section class="py-5 board-members-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-icon mb-4">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <h2 class="section-title">Our Board Members</h2>
+            <p class="section-subtitle">Visionary leaders driving NSPG's success</p>
+        </div>
+        
+        <div class="row">
+            <!-- Dr. Amardeep Singh -->
+            <div class="col-lg-6 mb-5">
+                <div class="director-card">
+                    <div class="director-image">
+                        <img src="/images/nspg/b1.jpg" alt="Dr. Amardeep Singh" class="img-fluid">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h4>Hon'ble Chairman</h4>
+                                <p>Leading with Vision</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="director-content">
+                        <div class="director-badge">
+                            <i class="fas fa-crown"></i>
+                            Chairman
+                        </div>
+                        <h3 class="director-name">Dr. Amardeep Singh</h3>
+                        <p class="director-title">Hon'ble Chairman</p>
+                        <p class="director-description">
+                            Dr. Amardeep Singh brings extensive experience in renewable energy and sustainable development. 
+                            Under his leadership, NSPG has grown to become a trusted name in solar energy solutions across India.
+                        </p>
+                        <div class="director-achievements">
+                            <div class="achievement-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>15+ Years in Renewable Energy</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>PhD in Engineering</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Industry Recognition</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Director's Message Section -->
+<section class="py-5 directors-message-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5">
+                <div class="message-content">
+                    <div class="section-icon mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <h2 class="section-title mb-4">Director's Message</h2>
+                    <div class="message-text">
+                        <p class="mb-4">
+                            NSPG Pvt Ltd is an EPC company established with a commitment to the environment and creating a more sustainable economy. 
+                            We provide the best service through our technical team, our upfront and straightforward approach during installation, 
+                            and most importantly, by putting our customers first.
+                        </p>
+                        <p class="mb-4">
+                            Our goal is to help you reduce your dependence on non-renewable energy sources and achieve sustainability in your business or home. 
+                            Our aim is to design and install the best system we can while offering great value for money.
+                        </p>
+                        <p class="mb-4">
+                            NSPG strives to provide the highest level of professionalism. I invite all residential and business owners, as well as shareholders 
+                            of modern society, to join hands in creating a clean, green, and bright future for generations to come.
+                        </p>
+                    </div>
+                    <div class="message-signature">
+                        <div class="signature-line"></div>
+                        <p class="signature-text">Dr. Amardeep Singh</p>
+                        <p class="signature-title">Hon'ble Chairman, NSPG Pvt. Ltd.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="message-image">
+                    <div class="image-wrapper">
+                        <img src="/images/nspg/b3.jpg" alt="Director's Message" class="img-fluid rounded-3">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h4>Our Commitment</h4>
+                                <p>To a sustainable future</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Values Section -->
+<section class="py-5 company-values-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-icon mb-4">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2 class="section-title">Our Core Values</h2>
+            <p class="section-subtitle">The principles that guide our leadership</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4 class="value-title">Environmental Commitment</h4>
+                    <p class="value-text">Dedicated to creating a sustainable future through clean energy solutions.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4 class="value-title">Customer First</h4>
+                    <p class="value-text">Putting our customers at the center of everything we do.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4 class="value-title">Technical Excellence</h4>
+                    <p class="value-text">Delivering the highest quality through our expert technical team.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="value-title">Professionalism</h4>
+                    <p class="value-text">Maintaining the highest standards of professionalism in all our work.</p>
                 </div>
             </div>
         </div>
@@ -237,8 +472,8 @@
                         </div>
                     </div>
                     <div class="team-content">
-                        <h4 class="team-name">HR Manager</h4>
-                        <p class="team-position">Human Resources</p>
+                        <h4 class="team-name">Project Manager</h4>
+                        <p class="team-position">Prayagraj</p>
                         <p class="team-description">Our dedicated HR Manager, ensuring our team is well-supported and our company culture thrives.</p>
                     </div>
                 </div>
@@ -395,7 +630,7 @@
                                 </div>
                                 <div class="contact-details">
                                     <h6 class="fw-bold mb-1">Phone Number</h6>
-                                    <p class="text-muted mb-0">+91 99568 93331</p>
+                                    <p class="text-muted mb-0">+91 93194 83455</p>
                                 </div>
                             </div>
                         </div>
@@ -446,6 +681,562 @@
     </div>
 </section>
 @endsection
+
+@push('styles')
+<style>
+/* About NSPG Section Styles */
+.about-nspg-section {
+    padding: 100px 0;
+}
+
+.section-badge {
+    display: inline-block;
+    background: var(--primary-orange);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.section-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.achievements {
+    margin-bottom: 30px;
+}
+
+.achievement-item {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.achievement-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+    margin: 0;
+}
+
+.achievement-label {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.about-features {
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.feature-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.feature-content h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.feature-content p {
+    color: var(--text-light);
+    margin: 0;
+}
+
+.about-images {
+    position: relative;
+}
+
+.main-image img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.floating-card h4 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+    margin: 0;
+}
+
+.floating-card p {
+    margin: 0;
+    color: var(--text-light);
+}
+
+/* Responsive Design for About NSPG Section */
+@media (max-width: 768px) {
+    .about-nspg-section {
+        padding: 60px 0;
+    }
+    
+    .about-content {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .about-features {
+        margin-bottom: 2rem;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .feature-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .achievements {
+        margin-bottom: 2rem;
+    }
+    
+    .achievement-item {
+        margin-bottom: 1rem;
+    }
+    
+    .achievement-number {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-nspg-section {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .achievement-number {
+        font-size: 1.5rem;
+    }
+}
+
+/* Board Members Section Styles */
+.board-members-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.director-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.director-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.director-image {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.director-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.director-card:hover .director-image img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.9) 0%, rgba(247, 147, 30, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.director-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+}
+
+.overlay-content h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.overlay-content p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.director-content {
+    padding: 30px;
+}
+
+.director-badge {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.director-badge i {
+    margin-right: 8px;
+}
+
+.director-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 5px;
+}
+
+.director-title {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.director-description {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.director-achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.achievement-item i {
+    color: #ff6b35;
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+/* Director's Message Section */
+.directors-message-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.message-content {
+    padding-right: 30px;
+}
+
+.section-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.section-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.message-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #6c757d;
+}
+
+.message-signature {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.signature-line {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    margin-bottom: 15px;
+}
+
+.signature-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 5px;
+}
+
+.signature-title {
+    color: #6c757d;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.message-image {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.9) 0%, rgba(247, 147, 30, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .image-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+}
+
+.overlay-content h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.overlay-content p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Company Values Section */
+.company-values-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.value-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.value-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.value-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.value-text {
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design for Board Sections */
+@media (max-width: 768px) {
+    .board-members-section,
+    .directors-message-section,
+    .company-values-section {
+        padding: 60px 0;
+    }
+    
+    .director-content {
+        padding: 20px;
+    }
+    
+    .director-name {
+        font-size: 1.5rem;
+    }
+    
+    .message-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .value-card {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .board-members-section,
+    .directors-message-section,
+    .company-values-section {
+        padding: 40px 0;
+    }
+    
+    .director-image {
+        height: 250px;
+    }
+    
+    .director-content {
+        padding: 15px;
+    }
+    
+    .director-name {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .value-card {
+        padding: 25px 15px;
+    }
+    
+    .value-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .value-icon i {
+        font-size: 1.5rem;
+    }
+}
+</style>
+@endpush
 
 @push('styles')
 <style>

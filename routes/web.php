@@ -100,7 +100,7 @@ Route::fallback(function () {
 Route::get('/', [App\Http\Controllers\FrontendController::class, 'index'])->name('home');
 Route::get('/about', [App\Http\Controllers\FrontendController::class, 'about'])->name('about');
 Route::get('/services', [App\Http\Controllers\FrontendController::class, 'services'])->name('services');
-Route::get('/board-of-directors', [App\Http\Controllers\FrontendController::class, 'boardOfDirectors'])->name('board-of-directors');
+Route::get('/calculator', [App\Http\Controllers\FrontendController::class, 'calculator'])->name('calculator');
 Route::get('/business-and-partnership', [App\Http\Controllers\FrontendController::class, 'businessAndPartnership'])->name('business-and-partnership');
 Route::get('/our-clients', [App\Http\Controllers\FrontendController::class, 'ourClients'])->name('our-clients');
 Route::get('/download', [App\Http\Controllers\FrontendController::class, 'download'])->name('download');

@@ -1048,87 +1048,233 @@ use Illuminate\Support\Facades\Storage;
 </section>
 
         
-        <!-- About Section -->
-<section class="about-section py-5">
+        <!-- Solar System Working Principle Section -->
+<section class="solar-principle-section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-                <div class="about-content">
-                    <span class="section-badge">About NSPG</span>
-                    <h2 class="section-title">Leading EPC Company in Solar Energy</h2>
-                    <p class="section-description">
-                        Nirmala Solar Power Generation Pvt. Ltd. (NSPG) is an EPC (Engineering, Procurement, and Construction) company established in 2015, dedicated to delivering solar solutions for both rooftop and ground-mounted installations. We harness solar energy efficiently and cost-effectively, offering environmentally friendly and energy-efficient solutions that provide a high return on investment.
-                    </p>
-                    
-                    <!-- Company Achievements -->
-                    <div class="achievements mb-4">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="achievement-item text-center">
-                                    <h3 class="achievement-number">500+</h3>
-                                    <p class="achievement-label">Residential Projects</p>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="achievement-item text-center">
-                                    <h3 class="achievement-number">2015</h3>
-                                    <p class="achievement-label">Established</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h5>EPC Services</h5>
-                                <p>Complete Engineering, Procurement, and Construction services</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h5>OEM in UP</h5>
-                                <p>Original Equipment Manufacturer in Uttar Pradesh</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h5>High ROI</h5>
-                                <p>Solutions providing high return on investment</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center text-lg-start">
-                        <a href="{{ route('about') }}" class="btn btn-primary">
-                            Learn More <i class="fas fa-arrow-right ms-2"></i>
-                        </a>
-                    </div>
+        <!-- Header Benefits -->
+        <div class="row mb-5">
+            <div class="col-md-4 mb-3">
+                <div class="benefit-card text-center" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 20px; border-radius: 10px;">
+                    <h5 class="mb-2">सोलर पावरपैक पर 60% तक की सब्सिडी</h5>
+                    <p class="mb-0" style="color: white;">Up to 60% subsidy on Solar Powerpack</p>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="about-images">
-                    <div class="main-image">
-                        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                             alt="Solar Installation" class="img-fluid">
+            <div class="col-md-4 mb-3">
+                <div class="benefit-card text-center" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white; padding: 20px; border-radius: 10px;">
+                    <h5 class="mb-2">अगले 25 सालों तक प्रतिमाह बिजली बिल की बचत</h5>
+                    <p class="mb-0" style="color: white;">Monthly electricity bill savings for the next 25 years</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="benefit-card text-center" style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white; padding: 20px; border-radius: 10px;">
+                    <h5 class="mb-2">बिजली की बढ़ती दरों से मुक्ति का आनन्द लें</h5>
+                    <p class="mb-0" style="color: white;">Enjoy freedom from rising electricity rates</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Title -->
+        <div class="text-center mb-5">
+            <h2 class="section-title" style="color: #1e3a8a; font-weight: 800;">ग्रिड संयोजित सोलर सिस्टम की कार्यप्रणाली</h2>
+            <p class="section-subtitle" style="color: #6c757d; font-size: 1.2rem;">Working Principle of Grid-Connected Solar System</p>
+        </div>
+
+        <!-- Working Process -->
+                        <div class="row">
+            <div class="col-12">
+                <div class="process-flow-container">
+                    <!-- Step 1: Solar Panels -->
+                    <div class="process-step-card">
+                        <div class="step-header">
+                            <div class="step-number-badge">
+                                <span class="step-number">01</span>
+                                </div>
+                            <div class="step-title-section">
+                                <h3 class="step-title">Solar Panels</h3>
+                                <div class="step-icon-large">
+                                    <i class="fas fa-solar-panel"></i>
+                            </div>
+                                </div>
+                            </div>
+                        <div class="step-content-body">
+                            <div class="step-description">
+                                <p class="hindi-text">सोलर ऐरे सूर्य के प्रकाश को उर्जा से बिजली में परिवर्तित करती है।</p>
+                                <p class="english-text">Solar array converts sunlight into electricity.</p>
+                        </div>
+                            <div class="step-flow-indicator">
+                                <div class="flow-arrow">
+                                    <i class="fas fa-arrow-right"></i>
                     </div>
-                    <div class="floating-card d-none d-lg-block">
-                        <div class="card-content">
-                            <h4>500+</h4>
-                            <p>Projects Completed</p>
+                                <div class="flow-label">DC</div>
+                            </div>
+                            </div>
+                        </div>
+
+                    <!-- Step 2: Inverter -->
+                    <div class="process-step-card">
+                        <div class="step-header">
+                            <div class="step-number-badge">
+                                <span class="step-number">02</span>
+                            </div>
+                            <div class="step-title-section">
+                                <h3 class="step-title">Solar Inverter</h3>
+                                <div class="step-icon-large">
+                                    <i class="fas fa-microchip"></i>
+                            </div>
+                        </div>
+                            </div>
+                        <div class="step-content-body">
+                            <div class="step-description">
+                                <p class="hindi-text">ऐरे द्वारा उत्पादित बिजली को इन्वर्टर डायरेक्ट करंट (DC) से अल्टरनेटिंग करंट (AC) में परिवर्तित करती है।</p>
+                                <p class="english-text">The inverter converts electricity from Direct Current (DC) to Alternating Current (AC).</p>
+                            </div>
+                            <div class="step-flow-indicator">
+                                <div class="flow-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                        </div>
+                                <div class="flow-label">AC</div>
+                    </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Electrical Appliances -->
+                    <div class="process-step-card">
+                        <div class="step-header">
+                            <div class="step-number-badge">
+                                <span class="step-number">03</span>
+                            </div>
+                            <div class="step-title-section">
+                                <h3 class="step-title">Electrical Appliances</h3>
+                                <div class="step-icon-large">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-content-body">
+                            <div class="step-description">
+                                <p class="hindi-text">एसी करंट तब मेन स्विच को जाता है और घर के उपकरणों को बिजली प्रदान करता है</p>
+                                <p class="english-text">AC current then goes to the main switch and powers electrical appliances.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Net Meter -->
+                    <div class="process-step-card">
+                        <div class="step-header">
+                            <div class="step-number-badge">
+                                <span class="step-number">04</span>
+                            </div>
+                            <div class="step-title-section">
+                                <h3 class="step-title">Bi-directional Solar Meter</h3>
+                                <div class="step-icon-large">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-content-body">
+                            <div class="step-description">
+                                <p class="hindi-text">नेट मीटर उपयोग मे ली गई उर्जा व उत्पादित अतिरिक्त एनर्जी दर्शाता है।</p>
+                                <p class="english-text">Net meter shows energy consumed and additional energy produced.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Grid Connection -->
+                    <div class="process-step-card">
+                        <div class="step-header">
+                            <div class="step-number-badge">
+                                <span class="step-number">05</span>
+                            </div>
+                            <div class="step-title-section">
+                                <h3 class="step-title">Utility Grid</h3>
+                                <div class="step-icon-large">
+                                    <i class="fas fa-plug"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-content-body">
+                            <div class="step-description">
+                                <p class="hindi-text">अतिरिक्त बिजली ग्रिड में चली जाती है। सोलर की उपलब्धता कम होने से उत्पादन नहीं होता। तब ग्रिड से उर्जा का आयात होता है।</p>
+                                <p class="english-text">Excess electricity goes to the grid. When solar availability is low, energy is imported from the grid.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- Component Legend -->
+        <div class="row mt-5">
+            <div class="col-lg-6">
+                <div class="component-legend">
+                    <h4 class="mb-4" style="color: #1e3a8a;">Component Legend</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="legend-item mb-2">
+                                <span class="legend-letter">A</span>
+                                <span>सोलर पेनल्स (Solar Panels)</span>
+                            </div>
+                            <div class="legend-item mb-2">
+                                <span class="legend-letter">B</span>
+                                <span>माउंटिंग स्ट्रक्चर (Mounting Structure)</span>
+                            </div>
+                            <div class="legend-item mb-2">
+                                <span class="legend-letter">C</span>
+                                <span>इंटरैक्टिव इनवर्टर (Interactive Inverter)</span>
+                            </div>
+                            <div class="legend-item mb-2">
+                                <span class="legend-letter">D</span>
+                                <span>मैन स्विच (Main Switch)</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="legend-item mb-2">
+                                <span class="legend-letter">E</span>
+                                <span>कांसुमेर लोड (Consumer Load)</span>
+                            </div>
+                            <div class="legend-item mb-2">
+                                <span class="legend-letter">F</span>
+                                <span>नेट मीटर (Net Meter)</span>
+                            </div>
+                            <div class="legend-item mb-2">
+                                <span class="legend-letter">G</span>
+                                <span>ग्रिड यूटिलिटी (Grid Utility)</span>
+                            </div>
+                            <div class="legend-item mb-2">
+                                <span class="legend-letter">H</span>
+                                <span>सर्ज/स्पाइक अरेस्टर (Surge/Spike Arrester)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="additional-benefits">
+                    <h4 class="mb-4" style="color: #1e3a8a;">Key Benefits</h4>
+                    <div class="benefit-item mb-3">
+                        <i class="fas fa-recycle" style="color: #059669; font-size: 1.5rem; margin-right: 15px;"></i>
+                        <span>लंबा जीवन (Long Life)</span>
+                    </div>
+                    <div class="benefit-item mb-3">
+                        <i class="fas fa-award" style="color: #f7931e; font-size: 1.5rem; margin-right: 15px;"></i>
+                        <span>गुणवत्ता आश्वासन (Quality Assurance)</span>
+                    </div>
+                    <div class="benefit-item mb-3">
+                        <i class="fas fa-cog" style="color: #1e3a8a; font-size: 1.5rem; margin-right: 15px;"></i>
+                        <span>लगाने में आसान (Easy to Install)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Button -->
+        <!-- <div class="text-center mt-5">
+            <a href="{{ route('about') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-info-circle me-2"></i>
+                Learn More About NSPG
+                        </a>
+                    </div>a -->
+                </div>
 </section>
 
 <!-- Government Subsidy Section -->
@@ -1138,7 +1284,7 @@ use Illuminate\Support\Facades\Storage;
             <span class="section-badge" style="background: white; color: #ff6b35;">Government Subsidies</span>
             <h2 class="section-title" style="color: white;">सरकारी अनुदान</h2>
             <p class="section-description" style="color: white; opacity: 0.9;">सोलर रूफटॉप संयंत्र के लिए उपलब्ध सरकारी सब्सिडी</p>
-        </div>
+            </div>
         
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -1147,7 +1293,7 @@ use Illuminate\Support\Facades\Storage;
                     <div class="subsidy-card mb-4">
                         <div class="subsidy-header">
                             <h3 class="subsidy-title">घरेलू ग्रिड संयोजित सोलर रूफटॉप संयंत्र हेतु केन्द्र सरकार द्वारा देय अनुदान</h3>
-                        </div>
+                    </div>
                         <div class="subsidy-table-container">
                             <table class="subsidy-table">
                                 <thead>
@@ -1182,7 +1328,7 @@ use Illuminate\Support\Facades\Storage;
                     <div class="subsidy-card state-subsidy">
                         <div class="subsidy-header state-header">
                             <h3 class="subsidy-title">राज्य सरकार द्वारा देय अनुदान</h3>
-                        </div>
+                </div>
                         <div class="subsidy-content">
                             <p class="subsidy-text">
                                 <strong>आवासीय रूफटॉप संयंत्रो हेतु उ.प्र. सौर ऊर्जा नीति 2022 के अन्तर्गत रु. 15,000 प्रति kW, अधिकतम रु. 30,000 अनुदान केन्द्र सरकार के अतिरिक्त देय है।</strong>
@@ -2681,6 +2827,406 @@ use Illuminate\Support\Facades\Storage;
     }
 }
 
+/* Solar Principle Section */
+.solar-principle-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.process-flow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-step-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.process-step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 107, 53, 0.2);
+}
+
+.step-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.step-number-badge {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.step-number {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.step-title-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.step-title {
+    color: #1e3a8a;
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon-large {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.step-icon-large i {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.step-content-body {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.step-description {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.hindi-text {
+    font-size: 1.2rem;
+    color: #2d3748;
+    font-weight: 600;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.english-text {
+    font-size: 1rem;
+    color: #6c757d;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+}
+
+.step-flow-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.flow-arrow {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.flow-arrow i {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.flow-label {
+    background: #f8f9fa;
+    color: #6c757d;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 2px solid #e9ecef;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    }
+}
+
+.component-legend {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.legend-item:hover {
+    background-color: #f8f9fa;
+}
+
+.legend-letter {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.additional-benefits {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.benefit-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Responsive Design for Solar Principle Section */
+@media (max-width: 768px) {
+    .solar-principle-section {
+        padding: 60px 0;
+    }
+    
+    .process-flow-container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .process-step-card {
+        margin-bottom: 25px;
+    }
+    
+    .step-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .step-number-badge {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .step-number {
+        font-size: 1.5rem;
+    }
+    
+    .step-title-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .step-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .step-icon-large {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .step-icon-large i {
+        font-size: 1.5rem;
+    }
+    
+    .step-content-body {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .step-description {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .hindi-text {
+        font-size: 1.1rem;
+    }
+    
+    .english-text {
+        font-size: 0.95rem;
+    }
+    
+    .step-flow-indicator {
+        margin-top: 15px;
+    }
+    
+    .flow-arrow {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .flow-arrow i {
+        font-size: 1.3rem;
+    }
+    
+    .component-legend,
+    .additional-benefits {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .solar-principle-section {
+        padding: 40px 0;
+    }
+    
+    .process-flow-container {
+        padding: 0 10px;
+    }
+    
+    .process-step-card {
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+    
+    .step-header {
+        padding: 15px;
+    }
+    
+    .step-number-badge {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .step-number {
+        font-size: 1.2rem;
+    }
+    
+    .step-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .step-icon-large {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    
+    .step-icon-large i {
+        font-size: 1.2rem;
+    }
+    
+    .step-content-body {
+        padding: 15px;
+    }
+    
+    .hindi-text {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .english-text {
+        font-size: 0.9rem;
+    }
+    
+    .flow-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .flow-arrow i {
+        font-size: 1.1rem;
+    }
+    
+    .flow-label {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .component-legend,
+    .additional-benefits {
+        padding: 15px;
+    }
+    
+    .legend-item {
+        padding: 8px;
+    }
+    
+    .legend-letter {
+        width: 25px;
+        height: 25px;
+        font-size: 0.9rem;
+    }
+}
+
 /* Government Subsidy Section */
 .subsidy-section {
     padding: 80px 0;
@@ -3398,3 +3944,312 @@ use Illuminate\Support\Facades\Storage;
     }
 </script>
 @endpush
+
+<!-- Diwali Offer Banner -->
+<div class="diwali-offer-banner" id="diwaliOfferBanner">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-8 col-md-7">
+                <div class="offer-content">
+                    <div class="offer-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="offer-text">
+                        <h4 class="offer-title">🎉 Diwali Special Offer</h4>
+                        <p class="offer-description">Get <span class="discount-highlight">10% OFF</span> on all solar installations this festive season!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-5 text-end">
+                <div class="offer-actions">
+                    <a href="{{ route('contact') }}" class="btn btn-offer-primary">
+                        <i class="fas fa-phone me-2"></i>
+                        Book Now
+                    </a>
+                    <button class="btn btn-offer-secondary" onclick="closeDiwaliOffer()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offer-decoration">
+        <div class="firework firework-1"></div>
+        <div class="firework firework-2"></div>
+        <div class="firework firework-3"></div>
+    </div>
+</div>
+
+<style>
+/* Diwali Offer Banner Styles */
+.diwali-offer-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 25%, #ffa726 50%, #ffb74d 75%, #ffcc80 100%);
+    color: white;
+    padding: 15px 0;
+    z-index: 9999;
+    box-shadow: 0 -5px 20px rgba(255, 107, 53, 0.3);
+    border-top: 3px solid #e65100;
+    animation: slideUpBounce 0.8s ease-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes slideUpBounce {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.offer-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.offer-icon {
+    font-size: 2.5rem;
+    animation: pulse 2s infinite;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.offer-text {
+    flex: 1;
+}
+
+.offer-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.offer-description {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+.discount-highlight {
+    background: linear-gradient(45deg, #ff1744, #ff5722);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 1.1em;
+    text-shadow: none;
+    box-shadow: 0 2px 8px rgba(255, 23, 68, 0.4);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 2px 8px rgba(255, 23, 68, 0.4);
+    }
+    to {
+        box-shadow: 0 4px 16px rgba(255, 23, 68, 0.6);
+    }
+}
+
+.offer-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn-offer-primary {
+    background: linear-gradient(45deg, #e65100, #ff5722);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 81, 0, 0.3);
+    font-size: 0.95rem;
+}
+
+.btn-offer-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 81, 0, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-offer-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 12px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-offer-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.offer-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.firework {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    animation: fireworkAnimation 3s infinite;
+}
+
+.firework-1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.firework-2 {
+    top: 30%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.firework-3 {
+    top: 40%;
+    left: 50%;
+    animation-delay: 2s;
+}
+
+@keyframes fireworkAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .diwali-offer-banner {
+        padding: 12px 0;
+    }
+    
+    .offer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .offer-icon {
+        font-size: 2rem;
+    }
+    
+    .offer-title {
+        font-size: 1.2rem;
+    }
+    
+    .offer-description {
+        font-size: 0.9rem;
+    }
+    
+    .offer-actions {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .btn-offer-primary {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .offer-text {
+        text-align: center;
+    }
+    
+    .offer-title {
+        font-size: 1.1rem;
+    }
+    
+    .offer-description {
+        font-size: 0.85rem;
+    }
+    
+    .discount-highlight {
+        font-size: 1em;
+        padding: 1px 6px;
+    }
+}
+</style>
+
+<script>
+function closeDiwaliOffer() {
+    const banner = document.getElementById('diwaliOfferBanner');
+    banner.style.animation = 'slideDown 0.5s ease-in forwards';
+    setTimeout(() => {
+        banner.style.display = 'none';
+    }, 500);
+}
+
+// Add slide down animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideDown {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
+</script>
