@@ -304,6 +304,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('admin.projects.index') }}" class="nav-link {{ request()->routeIs('admin.projects.*') ? 'active' : '' }}">
+                        <i class="fas fa-solar-panel"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('admin.calculator.index') }}" class="nav-link {{ request()->routeIs('admin.calculator.*') ? 'active' : '' }}">
                         <i class="fas fa-calculator"></i>
                         <span>Calculator Settings</span>

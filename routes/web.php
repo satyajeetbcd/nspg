@@ -152,6 +152,12 @@ Route::group(['middleware' => ['admin.auth'], 'prefix' => 'admin', 'as' => 'admi
     Route::post('calculator/{setting}/toggle-status', [App\Http\Controllers\Admin\CalculatorController::class, 'toggleStatus'])->name('calculator.toggle-status');
     Route::post('calculator/reset-defaults', [App\Http\Controllers\Admin\CalculatorController::class, 'resetToDefaults'])->name('calculator.reset-defaults');
     
+    // Project Management
+    Route::resource('projects', App\Http\Controllers\Admin\ProjectController::class);
+    Route::post('projects/{project}/toggle-status', [App\Http\Controllers\Admin\ProjectController::class, 'toggleStatus'])->name('projects.toggle-status');
+    Route::post('projects/{project}/toggle-featured', [App\Http\Controllers\Admin\ProjectController::class, 'toggleFeatured'])->name('projects.toggle-featured');
+    Route::post('projects/reorder', [App\Http\Controllers\Admin\ProjectController::class, 'reorder'])->name('projects.reorder');
+    
     // Logout route (protected)
     Route::any('logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
     

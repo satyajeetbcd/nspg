@@ -1718,59 +1718,120 @@ use Illuminate\Support\Facades\Storage;
         </div>
         
         <div class="row">
+            @forelse($projects as $project)
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                             alt="Residential Solar" class="img-fluid">
+                        @if($project->image_path)
+                            <img src="{{ asset('/' . $project->image_path) }}" 
+                                 alt="{{ $project->image_alt ?: $project->title }}" class="img-fluid">
+                        @else
+                            <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                 alt="{{ $project->title }}" class="img-fluid">
+                        @endif
                         <div class="project-overlay">
-                            <a href="#" class="project-link">
+                            <a href="#" class="project-link" data-bs-toggle="modal" data-bs-target="#projectModal{{ $project->id }}">
                                 <i class="fas fa-search-plus"></i>
                             </a>
                         </div>
+                        @if($project->is_featured)
+                            <div class="project-badge">
+                                <span class="badge bg-warning">Featured</span>
+                            </div>
+                        @endif
                     </div>
                     <div class="project-content">
-                        <h5>Residential Solar Installation</h5>
-                        <p>5kW solar system for a family home in Delhi</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                             alt="Commercial Solar" class="img-fluid">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-search-plus"></i>
-                            </a>
+                        <h5>{{ $project->title }}</h5>
+                        <p class="project-location">
+                            <i class="fas fa-map-marker-alt me-1"></i>
+                            {{ $project->location }}
+                        </p>
+                        @if($project->capacity)
+                            <p class="project-capacity">
+                                <i class="fas fa-bolt me-1"></i>
+                                {{ $project->capacity }}
+                            </p>
+                        @endif
+                        @if($project->description)
+                            <p class="project-description">{{ Str::limit($project->description, 80) }}</p>
+                        @endif
+                        <div class="project-meta">
+                            <span class="badge bg-info">{{ $project->project_type_label }}</span>
+                            @if($project->cost)
+                                <span class="project-cost">{{ $project->formatted_cost }}</span>
+                            @endif
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h5>Commercial Solar Project</h5>
-                        <p>50kW solar system for office building in Mumbai</p>
-                    </div>
                 </div>
             </div>
-            
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                             alt="Industrial Solar" class="img-fluid">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-search-plus"></i>
-                            </a>
+
+            <!-- Project Modal -->
+            <div class="modal fade" id="projectModal{{ $project->id }}" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{ $project->title }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    @if($project->image_path)
+                                        <img src="{{ asset('/' . $project->image_path) }}" 
+                                             alt="{{ $project->image_alt ?: $project->title }}" class="img-fluid rounded">
+                                    @else
+                                        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                             alt="{{ $project->title }}" class="img-fluid rounded">
+                                    @endif
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Project Details</h6>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Type:</strong> {{ $project->project_type_label }}</li>
+                                        <li><strong>Location:</strong> {{ $project->location }}</li>
+                                        @if($project->capacity)
+                                            <li><strong>Capacity:</strong> {{ $project->capacity }}</li>
+                                        @endif
+                                        @if($project->cost)
+                                            <li><strong>Cost:</strong> {{ $project->formatted_cost }}</li>
+                                        @endif
+                                        @if($project->installation_date)
+                                            <li><strong>Installation Date:</strong> {{ $project->formatted_installation_date }}</li>
+                                        @endif
+                                    </ul>
+                                    
+                                    @if($project->description)
+                                        <h6>Description</h6>
+                                        <p>{{ $project->description }}</p>
+                                    @endif
+                                    
+                                    @if($project->features && count($project->features) > 0)
+                                        <h6>Project Features</h6>
+                                        <ul>
+                                            @foreach($project->features as $feature)
+                                                <li>{{ $feature }}</li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="{{ route('contact') }}" class="btn btn-primary">Get Quote for Similar Project</a>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h5>Industrial Solar Farm</h5>
-                        <p>500kW solar farm for manufacturing facility</p>
-                    </div>
                 </div>
             </div>
+            @empty
+            <div class="col-12">
+                <div class="text-center py-5">
+                    <i class="fas fa-solar-panel fa-3x text-muted mb-3"></i>
+                    <h5 class="text-muted">No projects available</h5>
+                    <p class="text-muted">Check back soon for our latest solar installations.</p>
+                </div>
+            </div>
+            @endforelse
         </div>
         
         <div class="text-center mt-4">
@@ -4355,6 +4416,157 @@ use Illuminate\Support\Facades\Storage;
     .discount-highlight {
         font-size: 1em;
         padding: 1px 6px;
+    }
+}
+
+/* Project Cards Styles */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-link {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--primary-orange);
+    transform: scale(1.1);
+}
+
+.project-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h5 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.project-location,
+.project-capacity {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.project-description {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-cost {
+    color: var(--primary-orange);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Project Modal Styles */
+.project-modal .modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+.project-modal .modal-header {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
+    color: white;
+    border-radius: 12px 12px 0 0;
+}
+
+.project-modal .modal-header .btn-close {
+    filter: invert(1);
+}
+
+.project-modal .modal-body h6 {
+    color: var(--primary-orange);
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.project-modal .modal-body ul li {
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-image {
+        height: 180px;
+    }
+    
+    .project-content {
+        padding: 15px;
+    }
+    
+    .project-meta {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 </style>

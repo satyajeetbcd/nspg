@@ -8,6 +8,7 @@ use App\Models\PageContent;
 use App\Models\ContactInfo;
 use App\Models\Review;
 use App\Models\CalculatorSetting;
+use App\Models\Project;
 use App\Mail\ContactFormMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -23,8 +24,9 @@ class FrontendController extends Controller
         $contactInfos = ContactInfo::active()->ordered()->get();
         $reviews = Review::active()->featured()->orderBy('created_at', 'desc')->take(6)->get();
         $calculatorSettings = CalculatorSetting::getAllSettings();
+        $projects = Project::active()->ordered()->take(6)->get();
         
-        return view('frontend.home', compact('banners', 'solarSystems', 'pageContents', 'contactInfos', 'reviews', 'calculatorSettings'));
+        return view('frontend.home', compact('banners', 'solarSystems', 'pageContents', 'contactInfos', 'reviews', 'calculatorSettings', 'projects'));
     }
 
     public function about()
