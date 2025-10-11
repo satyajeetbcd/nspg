@@ -967,7 +967,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="top-bar-info">
-                    <span class="me-4"><i class="fas fa-phone me-1"></i> +91 945 030 4472</span>
+                    <span class="me-4"><i class="fas fa-phone me-1"></i> +91 931 948 3455</span>
                     <span><i class="fas fa-envelope me-1"></i> infonspg.in@gmail.com</span>
                 </div>
             </div>
@@ -1066,7 +1066,7 @@
                             </div>
                             <div class="contact-details">
                                 <h6 class="contact-title">Phone Inquiry</h6>
-                                <p class="contact-text">9956893331</p>
+                                <p class="contact-text">9319483455</p>
                             </div>
                         </div>
                         
@@ -1167,7 +1167,7 @@
     @stack('scripts')
     
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919450304472?text=Hello%20NSPG,%20I%20am%20interested%20in%20your%20solar%20power%20solutions.%20Please%20provide%20more%20information." 
+    <a href="https://wa.me/919319483455?text=Hello%20NSPG,%20I%20am%20interested%20in%20your%20solar%20power%20solutions.%20Please%20provide%20more%20information." 
        class="whatsapp-float" 
        target="_blank" 
        rel="noopener noreferrer"

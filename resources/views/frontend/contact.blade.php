@@ -187,7 +187,7 @@
                         </div>
                         
                         <!-- Noida Head Office -->
-                        <div class="contact-item mb-4">
+                        <!-- <div class="contact-item mb-4">
                             <div class="contact-icon">
                                 <i class="fas fa-building"></i>
                             </div>
@@ -195,7 +195,7 @@
                                 <h6 class="fw-bold mb-1">Noida Head Office</h6>
                                 <p class="text-muted mb-0">i2/001, Plot No. 11, Golf City, Sector 75, Noida, Uttar Pradesh 201301</p>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <!-- Phone Numbers -->
                         <div class="contact-item mb-4">
@@ -204,8 +204,8 @@
                             </div>
                             <div class="contact-details">
                                 <h6 class="fw-bold mb-1">Call Us</h6>
-                                <p class="text-muted mb-1">+91 99568 93331</p>
-                                <p class="text-muted mb-0">+91 91514 04472</p>
+                                <p class="text-muted mb-1">+91 93194 83455</p>
+                                <p class="text-muted mb-0">+91 93194 83455</p>
                             </div>
                         </div>
                         
@@ -370,9 +370,9 @@
                 <p class="lead mb-0">Our expert team is ready to help you. Contact us today!</p>
             </div>
             <div class="col-lg-4 text-lg-end">
-                <a href="tel:+919156804472" class="btn btn-warning btn-lg">
+                <a href="tel:+919319483455" class="btn btn-warning btn-lg">
                     <i class="fas fa-phone me-2"></i>
-                    +91 91514 04472
+                    +91 93194 83455
                 </a>
             </div>
         </div>
