@@ -1131,6 +1131,105 @@ use Illuminate\Support\Facades\Storage;
     </div>
 </section>
 
+<!-- Government Subsidy Section -->
+<section class="subsidy-section py-5" style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-badge" style="background: white; color: #ff6b35;">Government Subsidies</span>
+            <h2 class="section-title" style="color: white;">सरकारी अनुदान</h2>
+            <p class="section-description" style="color: white; opacity: 0.9;">सोलर रूफटॉप संयंत्र के लिए उपलब्ध सरकारी सब्सिडी</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="subsidy-container">
+                    <!-- Central Government Subsidy -->
+                    <div class="subsidy-card mb-4">
+                        <div class="subsidy-header">
+                            <h3 class="subsidy-title">घरेलू ग्रिड संयोजित सोलर रूफटॉप संयंत्र हेतु केन्द्र सरकार द्वारा देय अनुदान</h3>
+                        </div>
+                        <div class="subsidy-table-container">
+                            <table class="subsidy-table">
+                                <thead>
+                                    <tr>
+                                        <th>क्रमांक</th>
+                                        <th>संयंत्र क्षमता</th>
+                                        <th>लागू सब्सिडी</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td><strong>1kW क्षमता तक</strong></td>
+                                        <td><strong>रू. 30,000/-</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td><strong>2kW क्षमता तक</strong></td>
+                                        <td><strong>रू. 60,000/-</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td><strong>3kW क्षमता तक</strong></td>
+                                        <td><strong>रू. 78,000/-</strong><br><small>अधिकतम निर्धारित</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- State Government Subsidy -->
+                    <div class="subsidy-card state-subsidy">
+                        <div class="subsidy-header state-header">
+                            <h3 class="subsidy-title">राज्य सरकार द्वारा देय अनुदान</h3>
+                        </div>
+                        <div class="subsidy-content">
+                            <p class="subsidy-text">
+                                <strong>आवासीय रूफटॉप संयंत्रो हेतु उ.प्र. सौर ऊर्जा नीति 2022 के अन्तर्गत रु. 15,000 प्रति kW, अधिकतम रु. 30,000 अनुदान केन्द्र सरकार के अतिरिक्त देय है।</strong>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Total Savings Highlight -->
+                    <div class="savings-highlight">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="savings-item">
+                                    <h4>3kW सिस्टम</h4>
+                                    <p>कुल अनुदान</p>
+                                    <span class="savings-amount">रू. 1,08,000/-</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="savings-item">
+                                    <h4>2kW सिस्टम</h4>
+                                    <p>कुल अनुदान</p>
+                                    <span class="savings-amount">रू. 90,000/-</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="savings-item">
+                                    <h4>1kW सिस्टम</h4>
+                                    <p>कुल अनुदान</p>
+                                    <span class="savings-amount">रू. 45,000/-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <div class="text-center mt-4">
+                        <a href="{{ route('contact') }}" class="btn btn-warning btn-lg">
+                            <i class="fas fa-phone me-2"></i>
+                            मुफ्त सलाह लें
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Services Section -->
 <section class="services-section py-5 bg-light">
     <div class="container">
@@ -2578,6 +2677,233 @@ use Illuminate\Support\Facades\Storage;
     .avatar-circle {
         width: 50px;
         height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Government Subsidy Section */
+.subsidy-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.subsidy-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    pointer-events: none;
+}
+
+.subsidy-container {
+    position: relative;
+    z-index: 2;
+}
+
+.subsidy-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subsidy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.subsidy-header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.state-header {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+}
+
+.subsidy-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.subsidy-table-container {
+    padding: 0;
+    overflow-x: auto;
+}
+
+.subsidy-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.subsidy-table thead {
+    background: #f8f9fa;
+}
+
+.subsidy-table th {
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: 700;
+    color: #1e3a8a;
+    border-bottom: 2px solid #1e3a8a;
+    font-size: 0.9rem;
+}
+
+.subsidy-table td {
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.9rem;
+}
+
+.subsidy-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.subsidy-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.subsidy-content {
+    padding: 25px;
+}
+
+.subsidy-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+.savings-highlight {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.savings-item {
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.savings-item:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+}
+
+.savings-item h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.savings-item p {
+    color: #6c757d;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.savings-amount {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ff6b35;
+    display: block;
+}
+
+/* Responsive Design for Subsidy Section */
+@media (max-width: 768px) {
+    .subsidy-section {
+        padding: 60px 0;
+    }
+    
+    .subsidy-title {
+        font-size: 1rem;
+    }
+    
+    .subsidy-table th,
+    .subsidy-table td {
+        padding: 10px 5px;
+        font-size: 0.8rem;
+    }
+    
+    .subsidy-text {
+        font-size: 1rem;
+    }
+    
+    .savings-highlight {
+        padding: 20px;
+    }
+    
+    .savings-item {
+        padding: 15px 5px;
+        margin-bottom: 10px;
+    }
+    
+    .savings-item h4 {
+        font-size: 1.1rem;
+    }
+    
+    .savings-amount {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .subsidy-section {
+        padding: 40px 0;
+    }
+    
+    .subsidy-card {
+        margin-bottom: 20px;
+    }
+    
+    .subsidy-header {
+        padding: 15px;
+    }
+    
+    .subsidy-title {
+        font-size: 0.9rem;
+    }
+    
+    .subsidy-content {
+        padding: 20px;
+    }
+    
+    .subsidy-text {
+        font-size: 0.9rem;
+    }
+    
+    .savings-highlight {
+        padding: 15px;
+    }
+    
+    .savings-item {
+        padding: 12px 5px;
+    }
+    
+    .savings-item h4 {
+        font-size: 1rem;
+    }
+    
+    .savings-amount {
         font-size: 1.2rem;
     }
 }
