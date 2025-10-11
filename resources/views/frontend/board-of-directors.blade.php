@@ -110,7 +110,7 @@
             
             <!-- Ankita Singh -->
             <div class="col-lg-6 mb-5">
-                <div class="director-card">
+                <!-- <div class="director-card">
                     <div class="director-image">
                         <img src="/images/nspg/b2.jpg" alt="Ankita Singh" class="img-fluid">
                         <div class="image-overlay">
@@ -146,7 +146,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
