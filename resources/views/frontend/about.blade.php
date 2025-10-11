@@ -182,52 +182,82 @@
 </section>
 
 <!-- Board Members Section -->
-<section class="py-5 board-members-section">
+<section class="board-members-section">
     <div class="container">
-        <div class="text-center mb-5">
-            <div class="section-icon mb-4">
+        <div class="section-header">
+            <div class="section-icon">
                 <i class="fas fa-user-tie"></i>
             </div>
             <h2 class="section-title">Our Board Members</h2>
             <p class="section-subtitle">Visionary leaders driving NSPG's success</p>
+            <div class="section-decoration">
+                <div class="decoration-line"></div>
+                <div class="decoration-dot"></div>
+                <div class="decoration-line"></div>
+            </div>
         </div>
         
-        <div class="row">
+        <div class="row justify-content-center">
             <!-- Dr. Amardeep Singh -->
-            <div class="col-lg-6 mb-5">
+            <div class="col-lg-10 col-xl-8">
                 <div class="director-card">
-                    <div class="director-image">
-                        <img src="/images/nspg/b1.jpg" alt="Dr. Amardeep Singh" class="img-fluid">
-                        <div class="image-overlay">
-                            <div class="overlay-content">
-                                <h4>Hon'ble Chairman</h4>
-                                <p>Leading with Vision</p>
+                    <div class="card-glow"></div>
+                    <div class="row align-items-center">
+                        <!-- Image Column -->
+                        <div class="col-lg-5 col-md-6">
+                            <div class="director-image">
+                                <img src="/images/nspg/b1.jpg" alt="Dr. Amardeep Singh" class="img-fluid">
+                                <div class="image-overlay">
+                                    <div class="overlay-content">
+                                        <div class="overlay-icon">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <h4>Hon'ble Chairman</h4>
+                                        <p>Leading with Vision & Excellence</p>
+                                    </div>
+                                </div>
+                                <div class="image-badge">
+                                    <i class="fas fa-star"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="director-content">
-                        <div class="director-badge">
-                            <i class="fas fa-crown"></i>
-                            Chairman
-                        </div>
-                        <h3 class="director-name">Dr. Amardeep Singh</h3>
-                        <p class="director-title">Hon'ble Chairman</p>
-                        <p class="director-description">
-                            Dr. Amardeep Singh brings extensive experience in renewable energy and sustainable development. 
-                            Under his leadership, NSPG has grown to become a trusted name in solar energy solutions across India.
-                        </p>
-                        <div class="director-achievements">
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>15+ Years in Renewable Energy</span>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>PhD in Engineering</span>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Industry Recognition</span>
+                        <!-- Content Column -->
+                        <div class="col-lg-7 col-md-6">
+                            <div class="director-content">
+                                <div class="director-badge">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Chairman</span>
+                                </div>
+                                <h3 class="director-name">Dr. Amardeep Singh</h3>
+                                <p class="director-title">Hon'ble Chairman</p>
+                                <p class="director-description">
+                                    Dr. Amardeep Singh brings extensive experience in renewable energy and sustainable development. 
+                                    Under his visionary leadership, NSPG has grown to become a trusted name in solar energy solutions across India.
+                                </p>
+                                <div class="director-achievements">
+                                    <div class="achievement-item">
+                                        <div class="achievement-icon">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <span>15+ Years in Renewable Energy</span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <div class="achievement-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <span>PhD in Engineering</span>
+                                    </div>
+                                    <div class="achievement-item">
+                                        <div class="achievement-icon">
+                                            <i class="fas fa-award"></i>
+                                        </div>
+                                        <span>Industry Recognition</span>
+                                    </div>
+                                </div>
+                                <div class="director-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>"Leading the green energy revolution with innovation and integrity."</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -481,7 +511,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="/images/nspg/about2.jpeg" alt="Team Member" class="img-fluid">
+                        <img src="/images/nspg/about33.jpeg" alt="Team Member" class="img-fluid">
                         <div class="team-overlay">
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -866,39 +896,337 @@
     .achievement-number {
         font-size: 1.5rem;
     }
+    
+    /* Board Members Section Mobile */
+    .board-members-section {
+        padding: 80px 0;
+    }
+    
+    .section-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .director-card {
+        margin: 0 15px;
+    }
+    
+    .director-image {
+        height: 350px;
+        margin: 15px;
+    }
+    
+    .director-content {
+        padding: 30px 25px;
+        height: auto;
+    }
+    
+    .director-name {
+        font-size: 1.8rem;
+    }
+    
+    .director-title {
+        font-size: 1.1rem;
+    }
+    
+    .director-description {
+        font-size: 1rem;
+    }
+    
+    .achievement-item {
+        padding: 10px 14px;
+    }
+    
+    .achievement-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+        color: #ff6b35 !important;
+        background: white !important;
+        border: 2px solid #ff6b35 !important;
+    }
+    
+    .achievement-icon i {
+        color: #ff6b35 !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .achievement-item {
+        padding: 6px 10px;
+    }
+    
+    .director-quote {
+        padding: 20px;
+    }
+    
+    .director-quote p {
+        font-size: 1rem;
+    }
+    
+    .overlay-icon {
+        font-size: 3rem;
+    }
+    
+    .image-badge {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .board-members-section {
+        padding: 60px 0;
+    }
+    
+    .section-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .director-card {
+        margin: 0 10px;
+    }
+    
+    .director-image {
+        height: 300px;
+        margin: 10px;
+    }
+    
+    .director-content {
+        padding: 25px 20px;
+        height: auto;
+    }
+    
+    .director-name {
+        font-size: 1.6rem;
+    }
+    
+    .director-title {
+        font-size: 1rem;
+    }
+    
+    .director-description {
+        font-size: 0.95rem;
+    }
+    
+    .achievement-item {
+        padding: 8px 12px;
+    }
+    
+    .achievement-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 0.7rem;
+        color: #ff6b35 !important;
+        background: white !important;
+        border: 2px solid #ff6b35 !important;
+    }
+    
+    .achievement-icon i {
+        color: #ff6b35 !important;
+        font-size: 0.7rem !important;
+    }
+    
+    .achievement-item {
+        padding: 5px 8px;
+    }
+    
+    .director-quote {
+        padding: 18px;
+    }
+    
+    .director-quote p {
+        font-size: 0.95rem;
+    }
+    
+    .overlay-icon {
+        font-size: 2.5rem;
+    }
+    
+    .image-badge {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
 }
 
 /* Board Members Section Styles */
 .board-members-section {
-    padding: 100px 0;
-    background: #f8f9fa;
+    padding: 120px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.board-members-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ff6b35" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    font-size: 2.5rem;
+    color: white;
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.3);
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.section-icon::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.1; }
+    100% { transform: scale(1); opacity: 0.3; }
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    position: relative;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.section-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.decoration-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    border-radius: 2px;
+}
+
+.decoration-dot {
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
 }
 
 .director-card {
     background: white;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s ease;
     height: 100%;
+    position: relative;
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    min-height: 540px;
 }
 
 .director-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+}
+
+.card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.director-card:hover .card-glow {
+    opacity: 1;
 }
 
 .director-image {
     position: relative;
     overflow: hidden;
-    height: 300px;
+    height: 500px;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .director-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
+    filter: brightness(1.1) contrast(1.1);
+    border-radius: 20px;
 }
 
 .director-card:hover .director-image img {
@@ -911,12 +1239,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.9) 0%, rgba(247, 147, 30, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.95) 0%, rgba(247, 147, 30, 0.95) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(5px);
 }
 
 .director-card:hover .image-overlay {
@@ -926,21 +1255,73 @@
 .overlay-content {
     text-align: center;
     color: white;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.director-card:hover .overlay-content {
+    transform: translateY(0);
+}
+
+.overlay-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+    color: #ff6b35;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0 2px 4px rgba(255, 107, 53, 0.5));
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
 }
 
 .overlay-content h4 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .overlay-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 0;
+    opacity: 0.9;
+}
+
+.image-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.5);
+    animation: rotate 3s linear infinite;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    z-index: 10;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .director-content {
-    padding: 30px;
+    padding: 40px 40px 40px 20px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .director-badge {
@@ -948,53 +1329,115 @@
     align-items: center;
     background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
     color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 15px;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .director-badge i {
-    margin-right: 8px;
+    margin-right: 10px;
+    font-size: 1.1rem;
 }
 
 .director-name {
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 800;
     color: #1e3a8a;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    line-height: 1.2;
 }
 
 .director-title {
     color: #6c757d;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .director-description {
     color: #6c757d;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
 }
 
 .director-achievements {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 25px;
 }
 
 .achievement-item {
     display: flex;
     align-items: center;
-    color: #6c757d;
-    font-size: 0.9rem;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border-left: 3px solid #ff6b35;
 }
 
-.achievement-item i {
-    color: #ff6b35;
-    margin-right: 10px;
-    font-size: 0.8rem;
+.achievement-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-icon {
+    width: 30px;
+    height: 30px;
+    background: white !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    color: #ff6b35 !important;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+    border: 2px solid #ff6b35 !important;
+    transition: all 0.3s ease;
+}
+
+.achievement-icon i {
+    color: #ff6b35 !important;
+    font-size: 0.9rem !important;
+}
+
+.achievement-item span {
+    color: #495057;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.director-quote {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.director-quote i {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.director-quote p {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.6;
 }
 
 /* Director's Message Section */
@@ -1855,8 +2298,8 @@
 }
 
 .achievement-icon {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;

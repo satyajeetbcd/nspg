@@ -1274,7 +1274,7 @@ use Illuminate\Support\Facades\Storage;
                 Learn More About NSPG
                         </a>
                     </div>a -->
-                </div>
+                    </div>
 </section>
 
 <!-- Government Subsidy Section -->
@@ -1284,7 +1284,7 @@ use Illuminate\Support\Facades\Storage;
             <span class="section-badge" style="background: white; color: #ff6b35;">Government Subsidies</span>
             <h2 class="section-title" style="color: white;">सरकारी अनुदान</h2>
             <p class="section-description" style="color: white; opacity: 0.9;">सोलर रूफटॉप संयंत्र के लिए उपलब्ध सरकारी सब्सिडी</p>
-            </div>
+                </div>
         
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -1293,7 +1293,7 @@ use Illuminate\Support\Facades\Storage;
                     <div class="subsidy-card mb-4">
                         <div class="subsidy-header">
                             <h3 class="subsidy-title">घरेलू ग्रिड संयोजित सोलर रूफटॉप संयंत्र हेतु केन्द्र सरकार द्वारा देय अनुदान</h3>
-                    </div>
+            </div>
                         <div class="subsidy-table-container">
                             <table class="subsidy-table">
                                 <thead>
@@ -1321,14 +1321,14 @@ use Illuminate\Support\Facades\Storage;
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
                     </div>
+                        </div>
                     
                     <!-- State Government Subsidy -->
                     <div class="subsidy-card state-subsidy">
                         <div class="subsidy-header state-header">
                             <h3 class="subsidy-title">राज्य सरकार द्वारा देय अनुदान</h3>
-                </div>
+                    </div>
                         <div class="subsidy-content">
                             <p class="subsidy-text">
                                 <strong>आवासीय रूफटॉप संयंत्रो हेतु उ.प्र. सौर ऊर्जा नीति 2022 के अन्तर्गत रु. 15,000 प्रति kW, अधिकतम रु. 30,000 अनुदान केन्द्र सरकार के अतिरिक्त देय है।</strong>
@@ -1426,7 +1426,7 @@ use Illuminate\Support\Facades\Storage;
             </div>
             
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="service-card">
+                <div class="service-card ">
                     <div class="service-image">
                         <img src="/images/services/aata-chakki.svg" alt="Aata Chakki Solar" class="img-fluid">
                     </div>
@@ -1642,50 +1642,64 @@ use Illuminate\Support\Facades\Storage;
     </div>
 </section>
 @endif
-<!-- Why Choose Us Section -->
-<section class="why-choose-section py-5">
+<!-- Our Branches Section -->
+<section class="branches-section py-5">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-                <div class="why-choose-content">
-                    <span class="section-badge">Why Choose Us</span>
-                    <h2 class="section-title">Excellence in Every Project</h2>
-                    <p class="section-description">
-                        We are committed to delivering the highest quality solar energy solutions with unmatched customer service and support.
-                    </p>
-                    
-                    <div class="why-choose-features">
-                        <div class="feature-item">
-                            <div class="feature-number">01</div>
-                            <div class="feature-content">
-                                <h5>Expert Team</h5>
-                                <p>Our certified engineers and technicians have years of experience in solar energy.</p>
+        <div class="text-center mb-5">
+            <span class="section-badge">Our Branches</span>
+            <h2 class="section-title">Serving Across Uttar Pradesh</h2>
+            <p class="section-description">We have established our presence in key cities to serve you better</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="branch-card">
+                    <div class="branch-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                    <div class="branch-content">
+                        <h4 class="branch-name">Prayagraj</h4>
+                        <p class="branch-description">Our main branch serving the holy city of Prayagraj and surrounding areas</p>
+                        <div class="branch-features">
+                            <span class="feature-tag">Installation</span>
+                            <span class="feature-tag">Maintenance</span>
+                            <span class="feature-tag">Support</span>
+                        </div>
+                    </div>
                             </div>
                         </div>
                         
-                        <div class="feature-item">
-                            <div class="feature-number">02</div>
-                            <div class="feature-content">
-                                <h5>Quality Materials</h5>
-                                <p>We use only the highest quality solar panels and components from trusted manufacturers.</p>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="branch-card">
+                    <div class="branch-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                             </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-number">03</div>
-                            <div class="feature-content">
-                                <h5>Competitive Pricing</h5>
-                                <p>Get the best value for your investment with our competitive pricing and financing options.</p>
-                            </div>
+                    <div class="branch-content">
+                        <h4 class="branch-name">Gorakhpur</h4>
+                        <p class="branch-description">Expanding our services to Gorakhpur and eastern Uttar Pradesh region</p>
+                        <div class="branch-features">
+                            <span class="feature-tag">Installation</span>
+                            <span class="feature-tag">Maintenance</span>
+                            <span class="feature-tag">Support</span>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-lg-6 col-md-12">
-                <div class="why-choose-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
-                         alt="Solar Installation" class="img-fluid">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="branch-card">
+                    <div class="branch-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="branch-content">
+                        <h4 class="branch-name">Ayodhya</h4>
+                        <p class="branch-description">Serving the sacred city of Ayodhya and nearby districts</p>
+                        <div class="branch-features">
+                            <span class="feature-tag">Installation</span>
+                            <span class="feature-tag">Maintenance</span>
+                            <span class="feature-tag">Support</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2302,6 +2316,17 @@ use Illuminate\Support\Facades\Storage;
     transform: scale(1.05);
 }
 
+/* Stop rotation animation for Aata Chakki card */
+.aata-chakki-card .service-image img {
+    animation: none !important;
+    transform: none !important;
+    transition: transform 0.3s ease !important;
+}
+
+.aata-chakki-card:hover .service-image img {
+    transform: scale(1.05) !important;
+}
+
 .service-card h4 {
     font-size: 1.5rem;
     font-weight: 600;
@@ -2326,33 +2351,109 @@ use Illuminate\Support\Facades\Storage;
     color: var(--primary-blue);
 }
 
-/* Why Choose Section */
-.why-choose-section {
+/* Branches Section */
+.branches-section {
     padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-.why-choose-features .feature-item {
-    margin-bottom: 30px;
+.branch-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-.feature-number {
-    width: 50px;
-    height: 50px;
-    background: var(--primary-orange);
-    color: white;
+.branch-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
+}
+
+.branch-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.branch-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-right: 20px;
-    flex-shrink: 0;
+    margin: 0 auto 25px;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+    transition: all 0.3s ease;
 }
 
-.why-choose-image img {
+.branch-card:hover .branch-icon {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+}
+
+.branch-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.branch-name::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
+    border-radius: 2px;
+}
+
+.branch-description {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.branch-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.feature-tag {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
+    color: white;
+    padding: 6px 12px;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+    transition: all 0.3s ease;
+}
+
+.feature-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
 }
 
 /* Solar Calculator Section */
@@ -3492,7 +3593,7 @@ use Illuminate\Support\Facades\Storage;
     
     .about-section,
     .services-section,
-    .why-choose-section,
+    .branches-section,
     .projects-section,
     .testimonials-section {
         padding: 60px 0;
@@ -3552,21 +3653,51 @@ use Illuminate\Support\Facades\Storage;
         margin-bottom: 15px;
     }
     
-    /* Why Choose Section Mobile */
-    .why-choose-content {
-        text-align: center;
-        margin-bottom: 2rem;
+    /* Branches Section Mobile */
+    .branch-card {
+        padding: 30px 20px;
+        margin-bottom: 20px;
     }
     
-    .why-choose-features .feature-item {
-        flex-direction: row;
-        text-align: left;
-        margin-bottom: 1.5rem;
+    .branch-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
     }
     
-    .feature-number {
-        margin-right: 15px;
-        flex-shrink: 0;
+    .branch-name {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+    
+    .branch-description {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .feature-tag {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    
+    /* Branches Section Extra Small */
+    .branch-card {
+        padding: 25px 15px;
+    }
+    
+    .branch-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .branch-name {
+        font-size: 1.3rem;
+    }
+    
+    .branch-description {
+        font-size: 0.85rem;
     }
     
     /* Projects Section Mobile */
@@ -3670,7 +3801,7 @@ use Illuminate\Support\Facades\Storage;
     
     .about-section,
     .services-section,
-    .why-choose-section,
+    .branches-section,
     .projects-section,
     .testimonials-section {
         padding: 40px 0;
