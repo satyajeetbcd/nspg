@@ -297,7 +297,7 @@
                                 </div>
                                 <div class="contact-details">
                                     <h6 class="fw-bold mb-1">Send Email</h6>
-                                    <p class="text-muted mb-0">info@nspg.in</p>
+                                    <p class="text-muted mb-0">infonspg.in@gmail.com</p>
                                 </div>
                             </div>
                         </div>
@@ -308,7 +308,7 @@
                                 </div>
                                 <div class="contact-details">
                                     <h6 class="fw-bold mb-1">Office Hours</h6>
-                                    <p class="text-muted mb-0">Monday to Saturday: 09:00 AM - 06:00 PM</p>
+                                    <p class="text-muted mb-0">Monday to Saturday: 09:30 AM - 06:30 PM</p>
                                 </div>
                             </div>
                         </div>

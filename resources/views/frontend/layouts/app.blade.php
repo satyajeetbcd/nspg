@@ -1076,7 +1076,7 @@
                             </div>
                             <div class="contact-details">
                                 <h6 class="contact-title">Send Email</h6>
-                                <p class="contact-text">info@nspg.in</p>
+                                <p class="contact-text">infonspg.in@gmail.com</p>
                             </div>
                         </div>
                     </div>
