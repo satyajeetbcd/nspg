@@ -208,7 +208,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="/images/nspg/about1.jpeg" alt="Team Member" class="img-fluid">
+                        <img src="/images/nspg/about11.jpeg" alt="Team Member" class="img-fluid">
                         <div class="team-overlay">
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -219,7 +219,7 @@
                     </div>
                     <div class="team-content">
                         <h4 class="team-name">Project Manager</h4>
-                        <p class="team-position">Prayagraj</p>
+                        <p class="team-position">Varanasi</p>
                         <p class="team-description">Our experienced Project Manager based in Prayagraj, committed to delivering exceptional solar solutions.</p>
                     </div>
                 </div>
@@ -227,7 +227,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="/images/nspg/about2.jpeg" alt="Team Member" class="img-fluid">
+                        <img src="/images/nspg/about3.jpeg" alt="Team Member" class="img-fluid">
                         <div class="team-overlay">
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -246,7 +246,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="/images/nspg/about3.jpeg" alt="Team Member" class="img-fluid">
+                        <img src="/images/nspg/about2.jpeg" alt="Team Member" class="img-fluid">
                         <div class="team-overlay">
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>

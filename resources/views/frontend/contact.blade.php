@@ -205,7 +205,7 @@
                             <div class="contact-details">
                                 <h6 class="fw-bold mb-1">Call Us</h6>
                                 <p class="text-muted mb-1">+91 93194 83455</p>
-                                <p class="text-muted mb-0">+91 93194 83455</p>
+                                <p class="text-muted mb-0">+91 94503 04472</p>
                             </div>
                         </div>
                         
