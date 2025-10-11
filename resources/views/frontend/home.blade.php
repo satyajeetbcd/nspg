@@ -1834,11 +1834,11 @@ use Illuminate\Support\Facades\Storage;
             @endforelse
         </div>
         
-        <div class="text-center mt-4">
+        <!-- <div class="text-center mt-4">
             <a href="{{ route('services') }}" class="btn btn-primary">
                 View All Projects <i class="fas fa-arrow-right ms-2"></i>
             </a>
-        </div>
+        </div> -->
     </div>
 </section>
 
