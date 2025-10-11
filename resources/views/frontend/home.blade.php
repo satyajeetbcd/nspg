@@ -835,13 +835,13 @@ use Illuminate\Support\Facades\Storage;
                                     
                                     <!-- Company Name -->
                                     <h1 class="company-name mt-5">
-                                        Nirmala Solar Power Generation
-                                        <span class="private-limited">Private Limited</span>
+                                    निर्मला सोलर पावर जनरेशन
+                                        <span class="private-limited">प्राइवेट लिमिटेड</span>
                                     </h1>
                                     
                                     <!-- Company Description -->
                                     <div class="company-description mb-4">
-                                        <p class="lead">EPC Company established in 2015, delivering solar solutions for both rooftop and ground-mounted installations. We harness solar energy efficiently and cost-effectively, offering environmentally friendly solutions with high return on investment.</p>
+                                        <p class="lead">ईपीसी कंपनी की स्थापना 2015 में की गई थी, जो छत और ज़मीन पर लगाए जाने वाले दोनों प्रकार के सोलर प्रोजेक्ट्स के लिए समाधान प्रदान करती है। हम सौर ऊर्जा का कुशल और किफायती उपयोग करते हुए पर्यावरण के अनुकूल समाधान प्रदान करते हैं, जो उच्च निवेश प्रतिफल (ROI) सुनिश्चित करते हैं।</p>
                                     </div>
                                     
                                     <!-- Scheme Banner -->
@@ -859,27 +859,28 @@ use Illuminate\Support\Facades\Storage;
                                     
                                     <!-- Slogan -->
                                     <div class="banner-slogan">
-                                        <h2>Your Home, Your Electricity</h2>
-                                        <p>Free from electricity bills for 25 years</p>
+                                        <h2>प्रधानमंत्री सूर्य घर मुफ्त बिजली योजना</h2>
+                                        <p>अपना घर, अपनी बिजली
+                                        25 साल तक बिजली बिल से मुक्त</p>
                                     </div>
                                     
                                     <!-- Benefits -->
                                     <div class="benefits-features">
                                         <div class="feature-item">
                                             <i class="fas fa-check-circle"></i>
-                                            <span>25 Year Warranty</span>
+                                            <span>25 साल वारंटी</span>
                                         </div>
                                         <div class="feature-item">
                                             <i class="fas fa-leaf"></i>
-                                            <span>Environment Friendly</span>
+                                            <span>पर्यावरण अनुकूल</span>
                                         </div>
                                         <div class="feature-item">
                                             <i class="fas fa-bolt"></i>
-                                            <span>Renewable Energy</span>
+                                            <span>नवीकरणीय ऊर्जा</span>
                                         </div>
                                         <div class="feature-item">
                                             <i class="fas fa-charging-station"></i>
-                                            <span>Fast Installation</span>
+                                            <span>तेज चार्जिंग</span>
                                         </div>
                                     </div>
                                     
