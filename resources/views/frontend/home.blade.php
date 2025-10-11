@@ -1144,10 +1144,10 @@ use Illuminate\Support\Facades\Storage;
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="/images/services/epc-services.svg" alt="NSPG EPC Services" class="img-fluid">
+                        <img src="/images/services/rooftop-residential.svg" alt="Rooftop Residential Solar" class="img-fluid">
                     </div>
-                    <h4>NSPG EPC</h4>
-                    <p>Comprehensive EPC services including site-specific design, construction, and commissioning of solar projects for both rooftop and ground-mounted installations.</p>
+                    <h4>Rooftop Residential</h4>
+                    <p>Specialized solar solutions for residential rooftops, designed to maximize energy generation while maintaining aesthetic appeal and structural integrity.</p>
                     <a href="{{ route('services') }}" class="service-link">
                         Learn More <i class="fas fa-arrow-right"></i>
                     </a>
@@ -1157,10 +1157,10 @@ use Illuminate\Support\Facades\Storage;
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="/images/services/solar-finance.svg" alt="Solar Finance Solutions" class="img-fluid">
+                        <img src="/images/services/offgrid-solar.svg" alt="Offgrid Solar Solutions" class="img-fluid">
                     </div>
-                    <h4>Solar Finance</h4>
-                    <p>Financial solutions to facilitate the adoption of solar energy, making it accessible and affordable for all customers.</p>
+                    <h4>Offgrid</h4>
+                    <p>Complete off-grid solar systems with battery storage for areas without grid connectivity, ensuring reliable power supply 24/7.</p>
                     <a href="{{ route('services') }}" class="service-link">
                         Learn More <i class="fas fa-arrow-right"></i>
                     </a>
@@ -1170,10 +1170,10 @@ use Illuminate\Support\Facades\Storage;
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="/images/services/operations-maintenance.svg" alt="Operations & Maintenance" class="img-fluid">
+                        <img src="/images/services/hybrid-solar.svg" alt="Hybrid Solar Systems" class="img-fluid">
                     </div>
-                    <h4>Operations & Maintenance</h4>
-                    <p>Ensures the longevity and efficiency of solar installations through regular maintenance services and monitoring.</p>
+                    <h4>Hybrid</h4>
+                    <p>Advanced hybrid solar systems combining grid-tied and battery backup capabilities for maximum energy independence and cost savings.</p>
                     <a href="{{ route('services') }}" class="service-link">
                         Learn More <i class="fas fa-arrow-right"></i>
                     </a>
@@ -1183,10 +1183,10 @@ use Illuminate\Support\Facades\Storage;
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="/images/services/rooftop-solar.svg" alt="Rooftop Solar Solutions" class="img-fluid">
+                        <img src="/images/services/aata-chakki.svg" alt="Aata Chakki Solar" class="img-fluid">
                     </div>
-                    <h4>Rooftop Solar</h4>
-                    <p>Specialized rooftop solar solutions for residential and commercial buildings with over 500+ completed projects.</p>
+                    <h4>Aata Chakki</h4>
+                    <p>Solar-powered flour mills (Aata Chakki) providing clean energy solutions for traditional grain processing with significant cost savings.</p>
                     <a href="{{ route('services') }}" class="service-link">
                         Learn More <i class="fas fa-arrow-right"></i>
                     </a>
@@ -1196,10 +1196,10 @@ use Illuminate\Support\Facades\Storage;
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="/images/services/ground-mounted-solar.svg" alt="Ground-Mounted Solar" class="img-fluid">
+                        <img src="/images/services/hospital-solar.svg" alt="Hospital Solar Solutions" class="img-fluid">
                     </div>
-                    <h4>Ground-Mounted Solar</h4>
-                    <p>Large-scale ground-mounted solar installations for industrial and utility-scale projects with high efficiency.</p>
+                    <h4>Hospital</h4>
+                    <p>Critical power solutions for healthcare facilities ensuring uninterrupted medical services with reliable solar energy and backup systems.</p>
                     <a href="{{ route('services') }}" class="service-link">
                         Learn More <i class="fas fa-arrow-right"></i>
                     </a>
@@ -1209,10 +1209,10 @@ use Illuminate\Support\Facades\Storage;
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="/images/services/high-roi-solutions.svg" alt="High ROI Solutions" class="img-fluid">
+                        <img src="/images/services/commercial-solar.svg" alt="College Hotel Restaurant Petrol Pump Solar" class="img-fluid">
                     </div>
-                    <h4>High ROI Solutions</h4>
-                    <p>Environmentally friendly and energy-efficient solutions that provide high return on investment with up to 30% ROI.</p>
+                    <h4>College + Hotel & Restaurant, Petrol Pump</h4>
+                    <p>Comprehensive solar solutions for educational institutions, hospitality sector, and fuel stations with customized energy management systems.</p>
                     <a href="{{ route('services') }}" class="service-link">
                         Learn More <i class="fas fa-arrow-right"></i>
                     </a>

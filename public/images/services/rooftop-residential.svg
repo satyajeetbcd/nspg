@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="panelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E5BBA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E3A8A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roofGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0522D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="400" height="300" fill="url(#skyGradient)"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="250" width="400" height="50" fill="#90EE90"/>
+  
+  <!-- House structure -->
+  <rect x="100" y="180" width="200" height="70" fill="#F5F5DC"/>
+  
+  <!-- Roof -->
+  <polygon points="90,180 200,120 310,180" fill="url(#roofGradient)"/>
+  
+  <!-- Solar panels on roof -->
+  <rect x="110" y="140" width="60" height="30" fill="url(#panelGradient)" rx="2"/>
+  <rect x="180" y="140" width="60" height="30" fill="url(#panelGradient)" rx="2"/>
+  <rect x="250" y="140" width="60" height="30" fill="url(#panelGradient)" rx="2"/>
+  
+  <!-- Panel grid lines -->
+  <line x1="110" y1="155" x2="170" y2="155" stroke="#1E3A8A" stroke-width="1"/>
+  <line x1="140" y1="140" x2="140" y2="170" stroke="#1E3A8A" stroke-width="1"/>
+  <line x1="180" y1="155" x2="240" y2="155" stroke="#1E3A8A" stroke-width="1"/>
+  <line x1="210" y1="140" x2="210" y2="170" stroke="#1E3A8A" stroke-width="1"/>
+  <line x1="250" y1="155" x2="310" y2="155" stroke="#1E3A8A" stroke-width="1"/>
+  <line x1="280" y1="140" x2="280" y2="170" stroke="#1E3A8A" stroke-width="1"/>
+  
+  <!-- Sun -->
+  <circle cx="320" cy="60" r="25" fill="#FFD700"/>
+  <line x1="320" y1="20" x2="320" y2="100" stroke="#FFD700" stroke-width="3"/>
+  <line x1="280" y1="60" x2="360" y2="60" stroke="#FFD700" stroke-width="3"/>
+  <line x1="295" y1="35" x2="345" y2="85" stroke="#FFD700" stroke-width="3"/>
+  <line x1="345" y1="35" x2="295" y2="85" stroke="#FFD700" stroke-width="3"/>
+  
+  <!-- Sun rays -->
+  <line x1="300" y1="30" x2="290" y2="20" stroke="#FFD700" stroke-width="2"/>
+  <line x1="340" y1="30" x2="350" y2="20" stroke="#FFD700" stroke-width="2"/>
+  <line x1="300" y1="90" x2="290" y2="100" stroke="#FFD700" stroke-width="2"/>
+  <line x1="340" y1="90" x2="350" y2="100" stroke="#FFD700" stroke-width="2"/>
+  
+  <!-- Energy flow lines -->
+  <path d="M 200 120 Q 200 100 220 80 Q 240 60 260 40" stroke="#FF6B35" stroke-width="3" fill="none" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- House details -->
+  <rect x="150" y="200" width="30" height="50" fill="#8B4513"/>
+  <rect x="220" y="200" width="30" height="50" fill="#8B4513"/>
+  <rect x="190" y="210" width="20" height="30" fill="#87CEEB"/>
+  
+  <!-- Trees -->
+  <circle cx="50" cy="220" r="15" fill="#228B22"/>
+  <rect x="47" y="220" width="6" height="20" fill="#8B4513"/>
+  
+  <circle cx="350" cy="220" r="15" fill="#228B22"/>
+  <rect x="347" y="220" width="6" height="20" fill="#8B4513"/>
+  
+  <!-- Energy efficiency icon -->
+  <circle cx="200" cy="100" r="8" fill="#FF6B35"/>
+  <text x="200" y="105" text-anchor="middle" fill="white" font-family="Arial" font-size="10" font-weight="bold">⚡</text>
+</svg>
