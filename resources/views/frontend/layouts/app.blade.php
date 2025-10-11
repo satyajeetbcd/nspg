@@ -986,7 +986,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
-                <img src="/images/new-1.png" alt="NSPG Logo" height="100" class="me-3">
+                <img src="/images/new-1.png" alt="NSPG Logo" height="85" class="me-3">
             </a>
             
             <!-- Mobile Menu Button -->

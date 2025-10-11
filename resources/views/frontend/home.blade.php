@@ -608,7 +608,7 @@ use Illuminate\Support\Facades\Storage;
         margin-right: 0;
     }
     .marginset {
-        margin-top: 1px;
+        margin-top: 600px;
     }
 
 }
@@ -620,7 +620,7 @@ use Illuminate\Support\Facades\Storage;
         max-width: 400px;
     }
     .marginset {
-        margin-top: 1px;
+        margin-top: 600px;
     }
 }
 
@@ -630,7 +630,7 @@ use Illuminate\Support\Facades\Storage;
         max-width: 100%;
     }   
     .marginset {
-        margin-top: 4px;
+        margin-top: 600px;
     }
 }
 
@@ -912,7 +912,7 @@ use Illuminate\Support\Facades\Storage;
                     <div class="container">
                         <div class="row align-items-center min-vh-100">
                             <div class="col-lg-6 col-md-12">
-                                <div class="banner-content marginset">
+                                <div class="banner-content ">
                                     <span class="hero-badge">Leading Solar Solutions</span>
                                     <h1 class="hero-title">
                                         Clean Energy
@@ -979,7 +979,7 @@ use Illuminate\Support\Facades\Storage;
                     <div class="container">
                         <div class="row align-items-center min-vh-100">
                             <div class="col-lg-6 col-md-12">
-                                <div class="banner-content marginset">
+                                <div class="banner-content" style="margin-top: 200px;">
                                     <span class="hero-badge">Sustainable Future</span>
                                     <h1 class="hero-title">
                                         Renewable Energy
