@@ -126,18 +126,25 @@ Route::get('/debug-contact', function() {
 // Test mail configuration
 Route::get('/test-mail', function() {
     try {
-        $robustMailService = new \App\Services\RobustMailService();
-        $result = $robustMailService->testConnection('primary');
+        $simpleMailService = new \App\Services\SimpleMailService();
+        $result = $simpleMailService->sendWithFallback(
+            new \App\Mail\ContactFormMail([
+                'name' => 'Test User',
+                'phone' => '1234567890',
+                'email' => 'test@example.com',
+                'message' => 'Test email from server'
+            ]),
+            config('mail.from.address')
+        );
         
         return response()->json([
             'success' => true,
-            'message' => 'Mail configuration test successful',
-            'provider' => 'primary'
+            'message' => 'Mail test successful - check logs for details'
         ]);
     } catch (\Exception $e) {
         return response()->json([
             'success' => false,
-            'message' => 'Mail configuration test failed: ' . $e->getMessage(),
+            'message' => 'Mail test failed: ' . $e->getMessage(),
             'error' => $e->getMessage()
         ], 500);
     }

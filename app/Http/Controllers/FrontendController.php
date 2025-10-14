@@ -10,7 +10,7 @@ use App\Models\Review;
 use App\Models\CalculatorSetting;
 use App\Models\Project;
 use App\Mail\ContactFormMail;
-use App\Services\RobustMailService;
+use App\Services\SimpleMailService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -124,9 +124,9 @@ class FrontendController extends Controller
                 'message' => $request->message,
             ];
 
-            // Send email using robust mail service with fallback
-            $robustMailService = new RobustMailService();
-            $robustMailService->sendWithFallback(
+            // Send email using simple mail service with fallback
+            $simpleMailService = new SimpleMailService();
+            $simpleMailService->sendWithFallback(
                 new ContactFormMail($contactData),
                 config('mail.from.address')
             );

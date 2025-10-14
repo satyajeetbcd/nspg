@@ -32,7 +32,8 @@ class RobustMailService
             try {
                 $this->configureMailProvider($providerName);
                 
-                Log::info("Attempting to send email using provider: {$providerName}");
+                $provider = $this->providers[$providerName];
+                Log::info("Attempting to send email using provider: {$providerName} (Host: {$provider['host']}:{$provider['port']})");
                 
                 Mail::to($to)->send($mailable);
                 
@@ -68,6 +69,10 @@ class RobustMailService
     {
         $provider = $this->providers[$providerName];
         
+        // Clear any cached mail configuration
+        Config::forget('mail.mailers.smtp');
+        
+        // Set fresh configuration
         Config::set([
             'mail.default' => 'smtp',
             'mail.mailers.smtp.host' => $provider['host'],
@@ -77,6 +82,9 @@ class RobustMailService
             'mail.mailers.smtp.encryption' => $provider['encryption'],
             'mail.mailers.smtp.timeout' => $provider['timeout'],
         ]);
+        
+        // Force Laravel to reload the mail configuration
+        app('mail.manager')->forgetMailers();
     }
 
     /**
