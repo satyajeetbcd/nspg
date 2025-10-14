@@ -34,13 +34,13 @@ class ViewServiceProvider extends ServiceProvider
 
             // Create locale mapping for language switcher
             $localeMap = [
-                'en' => 'en-SA',
-                'ar' => 'ar-SA',
+                'en' => 'en-US',
+              
             ];
 
             $view->with([
                 'languages' => $languages,
-                'localeMap' => $localeMap,
+               
             ]);
 
             // Admin-specific variables
