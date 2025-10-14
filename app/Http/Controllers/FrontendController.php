@@ -10,7 +10,9 @@ use App\Models\Review;
 use App\Models\CalculatorSetting;
 use App\Models\Project;
 use App\Mail\ContactFormMail;
+use App\Services\RobustMailService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
@@ -122,8 +124,12 @@ class FrontendController extends Controller
                 'message' => $request->message,
             ];
 
-            // Send email
-            Mail::to(config('mail.from.address'))->send(new ContactFormMail($contactData));
+            // Send email using robust mail service with fallback
+            $robustMailService = new RobustMailService();
+            $robustMailService->sendWithFallback(
+                new ContactFormMail($contactData),
+                config('mail.from.address')
+            );
 
             return response()->json([
                 'success' => true,
@@ -131,11 +137,17 @@ class FrontendController extends Controller
             ]);
 
         } catch (\Exception $e) {
-            \Log::error('Contact form submission failed: ' . $e->getMessage());
+            \Log::error('Contact form submission failed: ' . $e->getMessage(), [
+                'file' => $e->getFile(),
+                'line' => $e->getLine(),
+                'trace' => $e->getTraceAsString(),
+                'request_data' => $request->all()
+            ]);
             
             return response()->json([
                 'success' => false,
-                'message' => 'Sorry, there was an error sending your message. Please try again later.'
+                'message' => 'Sorry, there was an error sending your message. Please try again later.',
+                'debug' => app()->environment('local') ? $e->getMessage() : null
             ], 500);
         }
     }

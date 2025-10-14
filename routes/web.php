@@ -108,6 +108,41 @@ Route::get('/contact', [App\Http\Controllers\FrontendController::class, 'contact
 Route::post('/contact', [App\Http\Controllers\FrontendController::class, 'submitContactForm'])->name('contact.submit');
 Route::get('/whats-new', [App\Http\Controllers\WhatsNewController::class, 'frontend'])->name('whats-new');
 
+// Debug route for contact form testing
+Route::get('/debug-contact', function() {
+    return response()->json([
+        'mail_config' => [
+            'default' => config('mail.default'),
+            'from' => config('mail.from'),
+            'smtp_host' => config('mail.mailers.smtp.host'),
+            'smtp_port' => config('mail.mailers.smtp.port'),
+        ],
+        'csrf_token' => csrf_token(),
+        'environment' => app()->environment(),
+        'debug_mode' => config('app.debug'),
+    ]);
+});
+
+// Test mail configuration
+Route::get('/test-mail', function() {
+    try {
+        $robustMailService = new \App\Services\RobustMailService();
+        $result = $robustMailService->testConnection('primary');
+        
+        return response()->json([
+            'success' => true,
+            'message' => 'Mail configuration test successful',
+            'provider' => 'primary'
+        ]);
+    } catch (\Exception $e) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Mail configuration test failed: ' . $e->getMessage(),
+            'error' => $e->getMessage()
+        ], 500);
+    }
+});
+
 // Review routes
 Route::get('/reviews', [App\Http\Controllers\ReviewController::class, 'index'])->name('reviews');
 Route::post('/reviews', [App\Http\Controllers\ReviewController::class, 'store'])->name('reviews.store');
