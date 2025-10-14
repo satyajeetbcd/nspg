@@ -858,8 +858,8 @@ use Illuminate\Support\Facades\Storage;
                                     <!-- Slogan -->
                                     <div class="banner-slogan">
                                         <h2>प्रधानमंत्री सूर्य घर मुफ्त बिजली योजना</h2>
-                                        <p>अपना घर, अपनी बिजली
-                                        25 साल तक बिजली बिल से मुक्त</p>
+                                    <p>अपना घर, अपना बिजली</p>
+                                       <p>25 साल तक बिजली बिल से मुक्त</p>
                                     </div>
                                     
                                     <!-- Benefits -->
