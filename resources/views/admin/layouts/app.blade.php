@@ -310,6 +310,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('admin.whats-new.index') }}" class="nav-link {{ request()->routeIs('admin.whats-new.*') ? 'active' : '' }}">
+                        <i class="fas fa-newspaper"></i>
+                        <span>What's New</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('admin.calculator.index') }}" class="nav-link {{ request()->routeIs('admin.calculator.*') ? 'active' : '' }}">
                         <i class="fas fa-calculator"></i>
                         <span>Calculator Settings</span>

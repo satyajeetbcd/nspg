@@ -1006,6 +1006,9 @@
                         <a class="nav-link" href="{{ route('services') }}">Services</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('whats-new') }}">What's New</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('our-clients') }}">Our Clients</a>
                     </li>
                     <li class="nav-item">

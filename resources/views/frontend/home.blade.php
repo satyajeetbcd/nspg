@@ -1080,122 +1080,138 @@ use Illuminate\Support\Facades\Storage;
         </div>
 
         <!-- Working Process -->
-                        <div class="row">
+        <div class="row">
             <div class="col-12">
                 <div class="process-flow-container">
-                    <!-- Step 1: Solar Panels -->
-                    <div class="process-step-card">
-                        <div class="step-header">
-                            <div class="step-number-badge">
-                                <span class="step-number">01</span>
+                    <!-- First Row: 3 Steps -->
+                    <div class="row mb-4">
+                        <!-- Step 1: Solar Panels -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="process-step-card">
+                                <div class="step-header">
+                                    <div class="step-number-badge">
+                                        <span class="step-number">01</span>
+                                    </div>
+                                    <div class="step-title-section">
+                                        <h3 class="step-title">Solar Panels</h3>
+                                        <div class="step-icon-large">
+                                            <i class="fas fa-solar-panel"></i>
+                                        </div>
+                                    </div>
                                 </div>
-                            <div class="step-title-section">
-                                <h3 class="step-title">Solar Panels</h3>
-                                <div class="step-icon-large">
-                                    <i class="fas fa-solar-panel"></i>
-                            </div>
+                                <div class="step-content-body">
+                                    <div class="step-description">
+                                        <p class="hindi-text">सोलर ऐरे सूर्य के प्रकाश को उर्जा से बिजली में परिवर्तित करती है।</p>
+                                        <p class="english-text">Solar array converts sunlight into electricity.</p>
+                                    </div>
+                                    <div class="step-flow-indicator">
+                                        <div class="flow-arrow">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                        <div class="flow-label">DC</div>
+                                    </div>
                                 </div>
-                            </div>
-                        <div class="step-content-body">
-                            <div class="step-description">
-                                <p class="hindi-text">सोलर ऐरे सूर्य के प्रकाश को उर्जा से बिजली में परिवर्तित करती है।</p>
-                                <p class="english-text">Solar array converts sunlight into electricity.</p>
-                        </div>
-                            <div class="step-flow-indicator">
-                                <div class="flow-arrow">
-                                    <i class="fas fa-arrow-right"></i>
-                    </div>
-                                <div class="flow-label">DC</div>
-                            </div>
                             </div>
                         </div>
 
-                    <!-- Step 2: Inverter -->
-                    <div class="process-step-card">
-                        <div class="step-header">
-                            <div class="step-number-badge">
-                                <span class="step-number">02</span>
-                            </div>
-                            <div class="step-title-section">
-                                <h3 class="step-title">Solar Inverter</h3>
-                                <div class="step-icon-large">
-                                    <i class="fas fa-microchip"></i>
-                            </div>
-                        </div>
-                            </div>
-                        <div class="step-content-body">
-                            <div class="step-description">
-                                <p class="hindi-text">ऐरे द्वारा उत्पादित बिजली को इन्वर्टर डायरेक्ट करंट (DC) से अल्टरनेटिंग करंट (AC) में परिवर्तित करती है।</p>
-                                <p class="english-text">The inverter converts electricity from Direct Current (DC) to Alternating Current (AC).</p>
-                            </div>
-                            <div class="step-flow-indicator">
-                                <div class="flow-arrow">
-                                    <i class="fas fa-arrow-right"></i>
-                        </div>
-                                <div class="flow-label">AC</div>
-                    </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 3: Electrical Appliances -->
-                    <div class="process-step-card">
-                        <div class="step-header">
-                            <div class="step-number-badge">
-                                <span class="step-number">03</span>
-                            </div>
-                            <div class="step-title-section">
-                                <h3 class="step-title">Electrical Appliances</h3>
-                                <div class="step-icon-large">
-                                    <i class="fas fa-home"></i>
+                        <!-- Step 2: Inverter -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="process-step-card">
+                                <div class="step-header">
+                                    <div class="step-number-badge">
+                                        <span class="step-number">02</span>
+                                    </div>
+                                    <div class="step-title-section">
+                                        <h3 class="step-title">Solar Inverter</h3>
+                                        <div class="step-icon-large">
+                                            <i class="fas fa-microchip"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-content-body">
+                                    <div class="step-description">
+                                        <p class="hindi-text">ऐरे द्वारा उत्पादित बिजली को इन्वर्टर डायरेक्ट करंट (DC) से अल्टरनेटिंग करंट (AC) में परिवर्तित करती है।</p>
+                                        <p class="english-text">The inverter converts electricity from Direct Current (DC) to Alternating Current (AC).</p>
+                                    </div>
+                                    <div class="step-flow-indicator">
+                                        <div class="flow-arrow">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                        <div class="flow-label">AC</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="step-content-body">
-                            <div class="step-description">
-                                <p class="hindi-text">एसी करंट तब मेन स्विच को जाता है और घर के उपकरणों को बिजली प्रदान करता है</p>
-                                <p class="english-text">AC current then goes to the main switch and powers electrical appliances.</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Step 4: Net Meter -->
-                    <div class="process-step-card">
-                        <div class="step-header">
-                            <div class="step-number-badge">
-                                <span class="step-number">04</span>
-                            </div>
-                            <div class="step-title-section">
-                                <h3 class="step-title">Bi-directional Solar Meter</h3>
-                                <div class="step-icon-large">
-                                    <i class="fas fa-tachometer-alt"></i>
+                        <!-- Step 3: Electrical Appliances -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="process-step-card">
+                                <div class="step-header">
+                                    <div class="step-number-badge">
+                                        <span class="step-number">03</span>
+                                    </div>
+                                    <div class="step-title-section">
+                                        <h3 class="step-title">Electrical Appliances</h3>
+                                        <div class="step-icon-large">
+                                            <i class="fas fa-home"></i>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="step-content-body">
-                            <div class="step-description">
-                                <p class="hindi-text">नेट मीटर उपयोग मे ली गई उर्जा व उत्पादित अतिरिक्त एनर्जी दर्शाता है।</p>
-                                <p class="english-text">Net meter shows energy consumed and additional energy produced.</p>
+                                <div class="step-content-body">
+                                    <div class="step-description">
+                                        <p class="hindi-text">एसी करंट तब मेन स्विच को जाता है और घर के उपकरणों को बिजली प्रदान करता है</p>
+                                        <p class="english-text">AC current then goes to the main switch and powers electrical appliances.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Step 5: Grid Connection -->
-                    <div class="process-step-card">
-                        <div class="step-header">
-                            <div class="step-number-badge">
-                                <span class="step-number">05</span>
-                            </div>
-                            <div class="step-title-section">
-                                <h3 class="step-title">Utility Grid</h3>
-                                <div class="step-icon-large">
-                                    <i class="fas fa-plug"></i>
+                    <!-- Second Row: 2 Steps -->
+                    <div class="row justify-content-center">
+                        <!-- Step 4: Net Meter -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="process-step-card">
+                                <div class="step-header">
+                                    <div class="step-number-badge">
+                                        <span class="step-number">04</span>
+                                    </div>
+                                    <div class="step-title-section">
+                                        <h3 class="step-title">Bi-directional Solar Meter</h3>
+                                        <div class="step-icon-large">
+                                            <i class="fas fa-tachometer-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-content-body">
+                                    <div class="step-description">
+                                        <p class="hindi-text">नेट मीटर उपयोग मे ली गई उर्जा व उत्पादित अतिरिक्त एनर्जी दर्शाता है।</p>
+                                        <p class="english-text">Net meter shows energy consumed and additional energy produced.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="step-content-body">
-                            <div class="step-description">
-                                <p class="hindi-text">अतिरिक्त बिजली ग्रिड में चली जाती है। सोलर की उपलब्धता कम होने से उत्पादन नहीं होता। तब ग्रिड से उर्जा का आयात होता है।</p>
-                                <p class="english-text">Excess electricity goes to the grid. When solar availability is low, energy is imported from the grid.</p>
+
+                        <!-- Step 5: Grid Connection -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="process-step-card">
+                                <div class="step-header">
+                                    <div class="step-number-badge">
+                                        <span class="step-number">05</span>
+                                    </div>
+                                    <div class="step-title-section">
+                                        <h3 class="step-title">Utility Grid</h3>
+                                        <div class="step-icon-large">
+                                            <i class="fas fa-plug"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-content-body">
+                                    <div class="step-description">
+                                        <p class="hindi-text">अतिरिक्त बिजली ग्रिड में चली जाती है। सोलर की उपलब्धता कम होने से उत्पादन नहीं होता। तब ग्रिड से उर्जा का आयात होता है।</p>
+                                        <p class="english-text">Excess electricity goes to the grid. When solar availability is low, energy is imported from the grid.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2998,18 +3014,22 @@ use Illuminate\Support\Facades\Storage;
 
 .process-flow-container {
     position: relative;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .process-step-card {
     background: white;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-    margin-bottom: 30px;
+    margin-bottom: 0;
     overflow: hidden;
     transition: all 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .process-step-card:hover {
@@ -3083,6 +3103,7 @@ use Illuminate\Support\Facades\Storage;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex: 1;
 }
 
 .step-description {
@@ -3226,6 +3247,7 @@ use Illuminate\Support\Facades\Storage;
     
     .process-step-card {
         margin-bottom: 25px;
+        height: auto;
     }
     
     .step-header {
@@ -3315,6 +3337,7 @@ use Illuminate\Support\Facades\Storage;
     .process-step-card {
         margin-bottom: 20px;
         border-radius: 15px;
+        height: auto;
     }
     
     .step-header {

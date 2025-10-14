@@ -485,7 +485,7 @@
                     <div class="team-content">
                         <h4 class="team-name">Project Manager</h4>
                         <p class="team-position">Varanasi</p>
-                        <p class="team-description">Our experienced Project Manager based in Prayagraj, committed to delivering exceptional solar solutions.</p>
+                        <p class="team-description">Our experienced Project Manager based in Varanasi, committed to delivering exceptional solar solutions.</p>
                     </div>
                 </div>
             </div>
@@ -504,7 +504,7 @@
                     <div class="team-content">
                         <h4 class="team-name">Project Manager</h4>
                         <p class="team-position">Prayagraj</p>
-                        <p class="team-description">Our dedicated HR Manager, ensuring our team is well-supported and our company culture thrives.</p>
+                        <p class="team-description">Our experienced Project Manager based in Prayagraj, committed to delivering exceptional solar solutions.</p>
                     </div>
                 </div>
             </div>

@@ -106,6 +106,7 @@ Route::get('/our-clients', [App\Http\Controllers\FrontendController::class, 'our
 Route::get('/download', [App\Http\Controllers\FrontendController::class, 'download'])->name('download');
 Route::get('/contact', [App\Http\Controllers\FrontendController::class, 'contact'])->name('contact');
 Route::post('/contact', [App\Http\Controllers\FrontendController::class, 'submitContactForm'])->name('contact.submit');
+Route::get('/whats-new', [App\Http\Controllers\WhatsNewController::class, 'frontend'])->name('whats-new');
 
 // Review routes
 Route::get('/reviews', [App\Http\Controllers\ReviewController::class, 'index'])->name('reviews');
@@ -157,6 +158,10 @@ Route::group(['middleware' => ['admin.auth'], 'prefix' => 'admin', 'as' => 'admi
     Route::post('projects/{project}/toggle-status', [App\Http\Controllers\Admin\ProjectController::class, 'toggleStatus'])->name('projects.toggle-status');
     Route::post('projects/{project}/toggle-featured', [App\Http\Controllers\Admin\ProjectController::class, 'toggleFeatured'])->name('projects.toggle-featured');
     Route::post('projects/reorder', [App\Http\Controllers\Admin\ProjectController::class, 'reorder'])->name('projects.reorder');
+    
+    // What's New Management
+    Route::resource('whats-new', App\Http\Controllers\WhatsNewController::class);
+    Route::post('whats-new/{whatsNew}/toggle-status', [App\Http\Controllers\WhatsNewController::class, 'toggleStatus'])->name('whats-new.toggle-status');
     
     // Logout route (protected)
     Route::any('logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('logout');
