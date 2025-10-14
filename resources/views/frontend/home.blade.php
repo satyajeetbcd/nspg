@@ -840,9 +840,7 @@ use Illuminate\Support\Facades\Storage;
                                     </h1>
                                     
                                     <!-- Company Description -->
-                                    <div class="company-description mb-4">
-                                        <p class="lead">ईपीसी कंपनी की स्थापना 2015 में की गई थी, जो छत और ज़मीन पर लगाए जाने वाले दोनों प्रकार के सोलर प्रोजेक्ट्स के लिए समाधान प्रदान करती है। हम सौर ऊर्जा का कुशल और किफायती उपयोग करते हुए पर्यावरण के अनुकूल समाधान प्रदान करते हैं, जो उच्च निवेश प्रतिफल (ROI) सुनिश्चित करते हैं।</p>
-                                    </div>
+                                   
                                     
                                     <!-- Scheme Banner -->
                                     <div class="scheme-banner mb-4">
@@ -1048,250 +1046,8 @@ use Illuminate\Support\Facades\Storage;
 </section>
 
         
-        <!-- Solar System Working Principle Section -->
-<section class="solar-principle-section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
-    <div class="container">
-        <!-- Header Benefits -->
-        <div class="row mb-5">
-            <div class="col-md-4 mb-3">
-                <div class="benefit-card text-center" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 20px; border-radius: 10px;">
-                    <h5 class="mb-2">सोलर पावरपैक पर 60% तक की सब्सिडी</h5>
-                    <p class="mb-0" style="color: white;">Up to 60% subsidy on Solar Powerpack</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div class="benefit-card text-center" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white; padding: 20px; border-radius: 10px;">
-                    <h5 class="mb-2">अगले 25 सालों तक प्रतिमाह बिजली बिल की बचत</h5>
-                    <p class="mb-0" style="color: white;">Monthly electricity bill savings for the next 25 years</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <div class="benefit-card text-center" style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white; padding: 20px; border-radius: 10px;">
-                    <h5 class="mb-2">बिजली की बढ़ती दरों से मुक्ति का आनन्द लें</h5>
-                    <p class="mb-0" style="color: white;">Enjoy freedom from rising electricity rates</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Title -->
-        <div class="text-center mb-5">
-            <h2 class="section-title" style="color: #1e3a8a; font-weight: 800;">ग्रिड संयोजित सोलर सिस्टम की कार्यप्रणाली</h2>
-            <p class="section-subtitle" style="color: #6c757d; font-size: 1.2rem;">Working Principle of Grid-Connected Solar System</p>
-        </div>
-
-        <!-- Working Process -->
-        <div class="row">
-            <div class="col-12">
-                <div class="process-flow-container">
-                    <!-- First Row: 3 Steps -->
-                    <div class="row mb-4">
-                        <!-- Step 1: Solar Panels -->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="process-step-card">
-                                <div class="step-header">
-                                    <div class="step-number-badge">
-                                        <span class="step-number">01</span>
-                                    </div>
-                                    <div class="step-title-section">
-                                        <h3 class="step-title">Solar Panels</h3>
-                                        <div class="step-icon-large">
-                                            <i class="fas fa-solar-panel"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="step-content-body">
-                                    <div class="step-description">
-                                        <p class="hindi-text">सोलर ऐरे सूर्य के प्रकाश को उर्जा से बिजली में परिवर्तित करती है।</p>
-                                        <p class="english-text">Solar array converts sunlight into electricity.</p>
-                                    </div>
-                                    <div class="step-flow-indicator">
-                                        <div class="flow-arrow">
-                                            <i class="fas fa-arrow-right"></i>
-                                        </div>
-                                        <div class="flow-label">DC</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Step 2: Inverter -->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="process-step-card">
-                                <div class="step-header">
-                                    <div class="step-number-badge">
-                                        <span class="step-number">02</span>
-                                    </div>
-                                    <div class="step-title-section">
-                                        <h3 class="step-title">Solar Inverter</h3>
-                                        <div class="step-icon-large">
-                                            <i class="fas fa-microchip"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="step-content-body">
-                                    <div class="step-description">
-                                        <p class="hindi-text">ऐरे द्वारा उत्पादित बिजली को इन्वर्टर डायरेक्ट करंट (DC) से अल्टरनेटिंग करंट (AC) में परिवर्तित करती है।</p>
-                                        <p class="english-text">The inverter converts electricity from Direct Current (DC) to Alternating Current (AC).</p>
-                                    </div>
-                                    <div class="step-flow-indicator">
-                                        <div class="flow-arrow">
-                                            <i class="fas fa-arrow-right"></i>
-                                        </div>
-                                        <div class="flow-label">AC</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Step 3: Electrical Appliances -->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="process-step-card">
-                                <div class="step-header">
-                                    <div class="step-number-badge">
-                                        <span class="step-number">03</span>
-                                    </div>
-                                    <div class="step-title-section">
-                                        <h3 class="step-title">Electrical Appliances</h3>
-                                        <div class="step-icon-large">
-                                            <i class="fas fa-home"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="step-content-body">
-                                    <div class="step-description">
-                                        <p class="hindi-text">एसी करंट तब मेन स्विच को जाता है और घर के उपकरणों को बिजली प्रदान करता है</p>
-                                        <p class="english-text">AC current then goes to the main switch and powers electrical appliances.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Second Row: 2 Steps -->
-                    <div class="row justify-content-center">
-                        <!-- Step 4: Net Meter -->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="process-step-card">
-                                <div class="step-header">
-                                    <div class="step-number-badge">
-                                        <span class="step-number">04</span>
-                                    </div>
-                                    <div class="step-title-section">
-                                        <h3 class="step-title">Bi-directional Solar Meter</h3>
-                                        <div class="step-icon-large">
-                                            <i class="fas fa-tachometer-alt"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="step-content-body">
-                                    <div class="step-description">
-                                        <p class="hindi-text">नेट मीटर उपयोग मे ली गई उर्जा व उत्पादित अतिरिक्त एनर्जी दर्शाता है।</p>
-                                        <p class="english-text">Net meter shows energy consumed and additional energy produced.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Step 5: Grid Connection -->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="process-step-card">
-                                <div class="step-header">
-                                    <div class="step-number-badge">
-                                        <span class="step-number">05</span>
-                                    </div>
-                                    <div class="step-title-section">
-                                        <h3 class="step-title">Utility Grid</h3>
-                                        <div class="step-icon-large">
-                                            <i class="fas fa-plug"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="step-content-body">
-                                    <div class="step-description">
-                                        <p class="hindi-text">अतिरिक्त बिजली ग्रिड में चली जाती है। सोलर की उपलब्धता कम होने से उत्पादन नहीं होता। तब ग्रिड से उर्जा का आयात होता है।</p>
-                                        <p class="english-text">Excess electricity goes to the grid. When solar availability is low, energy is imported from the grid.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Component Legend -->
-        <div class="row mt-5">
-            <div class="col-lg-6">
-                <div class="component-legend">
-                    <h4 class="mb-4" style="color: #1e3a8a;">Component Legend</h4>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="legend-item mb-2">
-                                <span class="legend-letter">A</span>
-                                <span>सोलर पेनल्स (Solar Panels)</span>
-                            </div>
-                            <div class="legend-item mb-2">
-                                <span class="legend-letter">B</span>
-                                <span>माउंटिंग स्ट्रक्चर (Mounting Structure)</span>
-                            </div>
-                            <div class="legend-item mb-2">
-                                <span class="legend-letter">C</span>
-                                <span>इंटरैक्टिव इनवर्टर (Interactive Inverter)</span>
-                            </div>
-                            <div class="legend-item mb-2">
-                                <span class="legend-letter">D</span>
-                                <span>मैन स्विच (Main Switch)</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="legend-item mb-2">
-                                <span class="legend-letter">E</span>
-                                <span>कांसुमेर लोड (Consumer Load)</span>
-                            </div>
-                            <div class="legend-item mb-2">
-                                <span class="legend-letter">F</span>
-                                <span>नेट मीटर (Net Meter)</span>
-                            </div>
-                            <div class="legend-item mb-2">
-                                <span class="legend-letter">G</span>
-                                <span>ग्रिड यूटिलिटी (Grid Utility)</span>
-                            </div>
-                            <div class="legend-item mb-2">
-                                <span class="legend-letter">H</span>
-                                <span>सर्ज/स्पाइक अरेस्टर (Surge/Spike Arrester)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="additional-benefits">
-                    <h4 class="mb-4" style="color: #1e3a8a;">Key Benefits</h4>
-                    <div class="benefit-item mb-3">
-                        <i class="fas fa-recycle" style="color: #059669; font-size: 1.5rem; margin-right: 15px;"></i>
-                        <span>लंबा जीवन (Long Life)</span>
-                    </div>
-                    <div class="benefit-item mb-3">
-                        <i class="fas fa-award" style="color: #f7931e; font-size: 1.5rem; margin-right: 15px;"></i>
-                        <span>गुणवत्ता आश्वासन (Quality Assurance)</span>
-                    </div>
-                    <div class="benefit-item mb-3">
-                        <i class="fas fa-cog" style="color: #1e3a8a; font-size: 1.5rem; margin-right: 15px;"></i>
-                        <span>लगाने में आसान (Easy to Install)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CTA Button -->
-        <!-- <div class="text-center mt-5">
-            <a href="{{ route('about') }}" class="btn btn-primary btn-lg">
-                <i class="fas fa-info-circle me-2"></i>
-                Learn More About NSPG
-                        </a>
-                    </div>a -->
-                    </div>
-</section>
+        <!-- Solar System Working Principle Section - Image -->
+       
 
 <!-- Government Subsidy Section -->
 <section class="subsidy-section py-5" style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);">
@@ -1391,7 +1147,29 @@ use Illuminate\Support\Facades\Storage;
         </div>
     </div>
 </section>
-
+<section class="solar-principle-image-section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="text-center mb-4">
+                            <h2 class="section-title" style="color: #1e3a8a; font-weight: 800; margin-bottom: 1rem;">ग्रिड संयोजित सोलर सिस्टम की कार्यप्रणाली</h2>
+                            <p class="section-subtitle" style="color: #6c757d; font-size: 1.2rem;">Working Principle of Grid-Connected Solar System</p>
+                        </div>
+                        
+                        <!-- Main Image -->
+                        <div class="solar-principle-image-container text-center">
+                            <img src="{{ asset('images/nspg/karya.jpeg') }}" 
+                                 alt="Solar System Working Principle" 
+                                 class="img-fluid solar-principle-image"
+                                 style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        </div>
+                        
+                        <!-- Benefits Cards Below Image -->
+                   
+                    </div>
+                </div>
+            </div>
+        </section>
 <!-- Services Section -->
 <section class="services-section py-5 bg-light">
     <div class="container">
@@ -3234,10 +3012,42 @@ use Illuminate\Support\Facades\Storage;
     background-color: #f8f9fa;
 }
 
+/* Solar Principle Image Section */
+.solar-principle-image-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.solar-principle-image-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.solar-principle-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #fff;
+}
+
+.solar-principle-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
 /* Responsive Design for Solar Principle Section */
 @media (max-width: 768px) {
     .solar-principle-section {
         padding: 60px 0;
+    }
+    
+    .solar-principle-image-section {
+        padding: 60px 0;
+    }
+    
+    .solar-principle-image-container {
+        padding: 0 10px;
     }
     
     .process-flow-container {
@@ -3328,6 +3138,18 @@ use Illuminate\Support\Facades\Storage;
 @media (max-width: 576px) {
     .solar-principle-section {
         padding: 40px 0;
+    }
+    
+    .solar-principle-image-section {
+        padding: 40px 0;
+    }
+    
+    .solar-principle-image-container {
+        padding: 0 5px;
+    }
+    
+    .solar-principle-image {
+        border-radius: 10px;
     }
     
     .process-flow-container {
