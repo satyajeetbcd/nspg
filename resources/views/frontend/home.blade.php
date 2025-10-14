@@ -1675,7 +1675,7 @@ use Illuminate\Support\Facades\Storage;
                             </div>
                     <div class="branch-content">
                         <h4 class="branch-name">Prayagraj</h4>
-                        <p class="branch-description">Our main branch serving the holy city of Prayagraj and surrounding areas</p>
+                        <p class="branch-description">Our branch serving the holy city of Prayagraj and surrounding areas</p>
                         <div class="branch-features">
                             <span class="feature-tag">Installation</span>
                             <span class="feature-tag">Maintenance</span>
