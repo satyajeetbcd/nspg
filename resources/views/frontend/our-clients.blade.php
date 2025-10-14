@@ -26,19 +26,19 @@
                         <div class="row text-center">
                             <div class="col-md-4">
                                 <div class="stat-item">
-                                    <h3 class="stat-number">500+</h3>
+                                    <h3 class="stat-number">4200+</h3>
                                     <p class="stat-label">Happy Clients</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="stat-item">
-                                    <h3 class="stat-number">50MW+</h3>
+                                    <h3 class="stat-number">10MW+</h3>
                                     <p class="stat-label">Solar Capacity</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="stat-item">
-                                    <h3 class="stat-number">98%</h3>
+                                    <h3 class="stat-number">96%</h3>
                                     <p class="stat-label">Satisfaction Rate</p>
                                 </div>
                             </div>

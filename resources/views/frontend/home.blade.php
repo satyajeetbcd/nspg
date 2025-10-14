@@ -932,15 +932,15 @@ use Illuminate\Support\Facades\Storage;
                                     </div>
                                     <div class="hero-stats d-none d-lg-flex">
                                         <div class="stat-item">
-                                            <h3>25+</h3>
+                                            <h3>10+</h3>
                                             <p>Years Experience</p>
                                         </div>
                                         <div class="stat-item">
-                                            <h3>700+</h3>
+                                            <h3>5000+</h3>
                                             <p>Projects Completed</p>
                                         </div>
                                         <div class="stat-item">
-                                            <h3>200+</h3>
+                                            <h3>4200+</h3>
                                             <p>Happy Clients</p>
                                         </div>
                                     </div>

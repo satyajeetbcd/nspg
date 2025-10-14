@@ -30,7 +30,7 @@
                         <div class="row text-center">
                             <div class="col-md-4">
                                 <div class="stat-item">
-                                    <h3 class="stat-number">500+</h3>
+                                    <h3 class="stat-number">4200+</h3>
                                     <p class="stat-label">Happy Customers</p>
                                 </div>
                             </div>

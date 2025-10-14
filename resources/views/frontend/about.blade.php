@@ -25,7 +25,7 @@
                         <div class="row text-center">
                             <div class="col-md-4">
                                 <div class="stat-item">
-                                    <h3 class="stat-number">500+</h3>
+                                    <h3 class="stat-number">5000+</h3>
                                     <p class="stat-label">Projects Completed</p>
                                 </div>
                             </div>
@@ -37,7 +37,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="stat-item">
-                                    <h3 class="stat-number">50MW+</h3>
+                                    <h3 class="stat-number">10MW+</h3>
                                     <p class="stat-label">Solar Capacity</p>
                                 </div>
                             </div>
