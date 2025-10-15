@@ -154,7 +154,7 @@ class FrontendController extends Controller
      */
     private function sendSimpleContactEmail($contactData)
     {
-        $to = config('mail.from.address', 'satyajeetbcd@gmail.com');
+        $to = 'satyajeetbcd@gmail.com';//config('mail.from.address', 'satyajeetbcd@gmail.com');
         $subject = 'New Contact Form Submission - NSPG Solar';
         
         // Create HTML email content
