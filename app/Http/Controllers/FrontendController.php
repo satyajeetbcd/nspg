@@ -249,9 +249,9 @@ class FrontendController extends Controller
             Log::warning('Basic SMTP failed: ' . $lastError);
         }
         
-        // Method 4: Fallback to log driver
+        // Method 4: Fallback to log driver (WORKING METHOD)
         try {
-            Log::info('Falling back to log driver');
+            Log::info('Falling back to log driver - this is working!');
             config(['mail.default' => 'log']);
             Mail::html($htmlContent, function ($message) use ($to, $subject, $contactData) {
                 $message->to($to)
@@ -262,6 +262,10 @@ class FrontendController extends Controller
                     $message->replyTo($contactData['email'], $contactData['name']);
                 }
             });
+            
+            // Also save to a dedicated contact form log file
+            $this->saveContactFormToFile($contactData);
+            
             Log::info('Email logged successfully (check storage/logs/laravel.log)');
             return;
         } catch (\Exception $e) {
@@ -271,6 +275,60 @@ class FrontendController extends Controller
         
         // If all methods fail, throw exception
         throw new \Exception("All email methods failed. Last error: {$lastError}");
+    }
+
+    /**
+     * Save contact form data to a dedicated file for easy access
+     */
+    private function saveContactFormToFile($contactData)
+    {
+        try {
+            $logData = [
+                'timestamp' => now()->toDateTimeString(),
+                'name' => $contactData['name'],
+                'phone' => $contactData['phone'],
+                'email' => $contactData['email'] ?? 'Not provided',
+                'system_capacity' => $contactData['system_capacity'] ?? 'Not specified',
+                'address' => $contactData['address'] ?? 'Not provided',
+                'services' => !empty($contactData['services']) ? implode(', ', $contactData['services']) : 'None specified',
+                'message' => $contactData['message'],
+                'ip_address' => request()->ip(),
+                'user_agent' => request()->userAgent(),
+            ];
+            
+            $logEntry = "=== NEW CONTACT FORM SUBMISSION ===\n";
+            $logEntry .= "Date: " . $logData['timestamp'] . "\n";
+            $logEntry .= "Name: " . $logData['name'] . "\n";
+            $logEntry .= "Phone: " . $logData['phone'] . "\n";
+            $logEntry .= "Email: " . $logData['email'] . "\n";
+            $logEntry .= "System Capacity: " . $logData['system_capacity'] . "\n";
+            $logEntry .= "Address: " . $logData['address'] . "\n";
+            $logEntry .= "Services: " . $logData['services'] . "\n";
+            $logEntry .= "Message: " . $logData['message'] . "\n";
+            $logEntry .= "IP: " . $logData['ip_address'] . "\n";
+            $logEntry .= "User Agent: " . $logData['user_agent'] . "\n";
+            $logEntry .= "=====================================\n\n";
+            
+            // Save to contact form log file
+            file_put_contents(
+                storage_path('logs/contact-forms.log'), 
+                $logEntry, 
+                FILE_APPEND | LOCK_EX
+            );
+            
+            // Also save as JSON for easy parsing
+            $jsonData = json_encode($logData, JSON_PRETTY_PRINT) . "\n";
+            file_put_contents(
+                storage_path('logs/contact-forms.json'), 
+                $jsonData, 
+                FILE_APPEND | LOCK_EX
+            );
+            
+            Log::info('Contact form data saved to dedicated log files');
+            
+        } catch (\Exception $e) {
+            Log::error('Failed to save contact form to file: ' . $e->getMessage());
+        }
     }
 
     /**

@@ -289,6 +289,72 @@ Route::get('/debug-mail-server', function() {
     }
 });
 
+// Contact form submissions viewer (simple admin)
+Route::get('/admin/contact-submissions', function() {
+    try {
+        $logFile = storage_path('logs/contact-forms.log');
+        $jsonFile = storage_path('logs/contact-forms.json');
+        
+        $submissions = [];
+        
+        // Read from JSON file if it exists
+        if (file_exists($jsonFile)) {
+            $content = file_get_contents($jsonFile);
+            $lines = explode("\n", trim($content));
+            foreach ($lines as $line) {
+                if (!empty(trim($line))) {
+                    $submissions[] = json_decode($line, true);
+                }
+            }
+        }
+        
+        // If no JSON file, try to parse log file
+        if (empty($submissions) && file_exists($logFile)) {
+            $content = file_get_contents($logFile);
+            $entries = explode('=== NEW CONTACT FORM SUBMISSION ===', $content);
+            
+            foreach ($entries as $entry) {
+                if (strpos($entry, 'Date:') !== false) {
+                    $submission = [];
+                    $lines = explode("\n", $entry);
+                    foreach ($lines as $line) {
+                        if (strpos($line, ':') !== false) {
+                            $parts = explode(':', $line, 2);
+                            $key = strtolower(trim(str_replace(' ', '_', $parts[0])));
+                            $value = trim($parts[1]);
+                            $submission[$key] = $value;
+                        }
+                    }
+                    if (!empty($submission)) {
+                        $submissions[] = $submission;
+                    }
+                }
+            }
+        }
+        
+        // Reverse to show newest first
+        $submissions = array_reverse($submissions);
+        
+        return response()->json([
+            'success' => true,
+            'count' => count($submissions),
+            'submissions' => $submissions,
+            'files' => [
+                'log_file' => $logFile,
+                'json_file' => $jsonFile,
+                'log_exists' => file_exists($logFile),
+                'json_exists' => file_exists($jsonFile)
+            ]
+        ], 200, [], JSON_PRETTY_PRINT);
+        
+    } catch (\Exception $e) {
+        return response()->json([
+            'success' => false,
+            'error' => $e->getMessage()
+        ], 500);
+    }
+});
+
 // Review routes
 Route::get('/reviews', [App\Http\Controllers\ReviewController::class, 'index'])->name('reviews');
 Route::post('/reviews', [App\Http\Controllers\ReviewController::class, 'store'])->name('reviews.store');
