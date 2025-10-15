@@ -150,6 +150,40 @@ Route::get('/test-mail', function() {
     }
 });
 
+// Test simple contact form
+Route::get('/test-contact-form', function() {
+    try {
+        $controller = new \App\Http\Controllers\FrontendController();
+        $reflection = new ReflectionClass($controller);
+        $method = $reflection->getMethod('sendSimpleContactEmail');
+        $method->setAccessible(true);
+        
+        $testData = [
+            'name' => 'Test User',
+            'phone' => '1234567890',
+            'email' => 'test@example.com',
+            'system_capacity' => '5kW',
+            'address' => 'Test Address',
+            'services' => ['Installation', 'Maintenance'],
+            'message' => 'This is a test message from the contact form',
+            'submitted_at' => now()->format('F j, Y \a\t g:i A'),
+        ];
+        
+        $method->invoke($controller, $testData);
+        
+        return response()->json([
+            'success' => true,
+            'message' => 'Simple contact form test successful - check logs for details'
+        ]);
+    } catch (\Exception $e) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Simple contact form test failed: ' . $e->getMessage(),
+            'error' => $e->getMessage()
+        ], 500);
+    }
+});
+
 // Review routes
 Route::get('/reviews', [App\Http\Controllers\ReviewController::class, 'index'])->name('reviews');
 Route::post('/reviews', [App\Http\Controllers\ReviewController::class, 'store'])->name('reviews.store');
