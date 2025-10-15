@@ -154,7 +154,7 @@ class FrontendController extends Controller
      */
     private function sendSimpleContactEmail($contactData)
     {
-        $to = config('mail.from.address', 'infonspg.in@gmail.com');
+        $to = config('mail.from.address', 'satyajeetbcd@gmail.com');
         $subject = 'New Contact Form Submission - NSPG Solar';
         
         // Create HTML email content
@@ -163,17 +163,114 @@ class FrontendController extends Controller
         // Create plain text content
         $textContent = $this->buildContactEmailText($contactData);
         
-        // Send email using Laravel's Mail facade with simple configuration
-        Mail::html($htmlContent, function ($message) use ($to, $subject, $contactData) {
-            $message->to($to)
-                   ->subject($subject)
-                   ->from(config('mail.from.address'), config('mail.from.name', 'NSPG Solar'));
+        // Try multiple mail methods for better server compatibility
+        $this->sendEmailWithFallback($to, $subject, $htmlContent, $textContent, $contactData);
+    }
+
+    /**
+     * Send email with multiple fallback methods
+     */
+    private function sendEmailWithFallback($to, $subject, $htmlContent, $textContent, $contactData)
+    {
+        $lastError = null;
+        
+        // Method 1: Try Laravel Mail with current config
+        try {
+            Log::info('Trying Laravel Mail with current config');
+            Mail::html($htmlContent, function ($message) use ($to, $subject, $contactData) {
+                $message->to($to)
+                       ->subject($subject)
+                       ->from(config('mail.from.address'), config('mail.from.name', 'NSPG Solar'));
+                
+                if (!empty($contactData['email'])) {
+                    $message->replyTo($contactData['email'], $contactData['name']);
+                }
+            });
+            Log::info('Email sent successfully with Laravel Mail');
+            return;
+        } catch (\Exception $e) {
+            $lastError = $e->getMessage();
+            Log::warning('Laravel Mail failed: ' . $lastError);
+        }
+        
+        // Method 2: Try with Gmail SMTP
+        try {
+            Log::info('Trying Gmail SMTP');
+            config([
+                'mail.default' => 'smtp',
+                'mail.mailers.smtp.host' => 'smtp.gmail.com',
+                'mail.mailers.smtp.port' => 587,
+                'mail.mailers.smtp.username' => config('mail.from.address'),
+                'mail.mailers.smtp.password' => config('mail.mailers.smtp.password'),
+                'mail.mailers.smtp.encryption' => 'tls',
+            ]);
             
-            // Add reply-to if email is provided
-            if (!empty($contactData['email'])) {
-                $message->replyTo($contactData['email'], $contactData['name']);
-            }
-        });
+            Mail::html($htmlContent, function ($message) use ($to, $subject, $contactData) {
+                $message->to($to)
+                       ->subject($subject)
+                       ->from(config('mail.from.address'), config('mail.from.name', 'NSPG Solar'));
+                
+                if (!empty($contactData['email'])) {
+                    $message->replyTo($contactData['email'], $contactData['name']);
+                }
+            });
+            Log::info('Email sent successfully with Gmail SMTP');
+            return;
+        } catch (\Exception $e) {
+            $lastError = $e->getMessage();
+            Log::warning('Gmail SMTP failed: ' . $lastError);
+        }
+        
+        // Method 3: Try with basic SMTP (no encryption)
+        try {
+            Log::info('Trying basic SMTP without encryption');
+            config([
+                'mail.default' => 'smtp',
+                'mail.mailers.smtp.host' => 'smtp.gmail.com',
+                'mail.mailers.smtp.port' => 587,
+                'mail.mailers.smtp.username' => config('mail.from.address'),
+                'mail.mailers.smtp.password' => config('mail.mailers.smtp.password'),
+                'mail.mailers.smtp.encryption' => null,
+            ]);
+            
+            Mail::html($htmlContent, function ($message) use ($to, $subject, $contactData) {
+                $message->to($to)
+                       ->subject($subject)
+                       ->from(config('mail.from.address'), config('mail.from.name', 'NSPG Solar'));
+                
+                if (!empty($contactData['email'])) {
+                    $message->replyTo($contactData['email'], $contactData['name']);
+                }
+            });
+            Log::info('Email sent successfully with basic SMTP');
+            return;
+        } catch (\Exception $e) {
+            $lastError = $e->getMessage();
+            Log::warning('Basic SMTP failed: ' . $lastError);
+        }
+        
+        // Method 4: Fallback to log driver
+        try {
+            Log::info('Falling back to log driver');
+            config(['mail.default' => 'log']);
+            Mail::html($htmlContent, function ($message) use ($to, $subject, $contactData) {
+                $message->to($to)
+                       ->subject($subject)
+                       ->from(config('mail.from.address'), config('mail.from.name', 'NSPG Solar'));
+                
+                if (!empty($contactData['email'])) {
+                    $message->replyTo($contactData['email'], $contactData['name']);
+                }
+            });
+            Log::info('Email logged successfully (check storage/logs/laravel.log)');
+            return;
+        } catch (\Exception $e) {
+            $lastError = $e->getMessage();
+            Log::error('Even log driver failed: ' . $lastError);
+        }
+        
+        // If all methods fail, throw exception
+        throw new \Exception("All email methods failed. Last error: {$lastError}");
     }
 
     /**

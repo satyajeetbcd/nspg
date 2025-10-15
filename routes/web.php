@@ -184,6 +184,111 @@ Route::get('/test-contact-form', function() {
     }
 });
 
+// Comprehensive mail debugging route
+Route::get('/debug-mail-server', function() {
+    $debugInfo = [];
+    
+    try {
+        // 1. Check environment variables
+        $debugInfo['environment'] = [
+            'MAIL_MAILER' => env('MAIL_MAILER'),
+            'MAIL_HOST' => env('MAIL_HOST'),
+            'MAIL_PORT' => env('MAIL_PORT'),
+            'MAIL_USERNAME' => env('MAIL_USERNAME'),
+            'MAIL_PASSWORD' => env('MAIL_PASSWORD') ? '***SET***' : 'NOT SET',
+            'MAIL_ENCRYPTION' => env('MAIL_ENCRYPTION'),
+            'MAIL_FROM_ADDRESS' => env('MAIL_FROM_ADDRESS'),
+            'MAIL_FROM_NAME' => env('MAIL_FROM_NAME'),
+            'APP_ENV' => app()->environment(),
+            'APP_DEBUG' => config('app.debug'),
+        ];
+        
+        // 2. Check mail configuration
+        $debugInfo['mail_config'] = [
+            'default' => config('mail.default'),
+            'from' => config('mail.from'),
+            'smtp' => config('mail.mailers.smtp'),
+        ];
+        
+        // 3. Test basic mail sending
+        $debugInfo['mail_test'] = [];
+        
+        try {
+            // Test with log driver first
+            config(['mail.default' => 'log']);
+            \Mail::raw('Test email from server - ' . now(), function($message) {
+                $message->to('satyajeetbcd@gmail.com')
+                       ->subject('Server Mail Test - ' . now());
+            });
+            $debugInfo['mail_test']['log_driver'] = 'SUCCESS - Check storage/logs/laravel.log';
+        } catch (\Exception $e) {
+            $debugInfo['mail_test']['log_driver'] = 'FAILED: ' . $e->getMessage();
+        }
+        
+        // 4. Test SMTP if configured
+        if (env('MAIL_HOST') && env('MAIL_USERNAME')) {
+            try {
+                config([
+                    'mail.default' => 'smtp',
+                    'mail.mailers.smtp.host' => env('MAIL_HOST'),
+                    'mail.mailers.smtp.port' => env('MAIL_PORT', 587),
+                    'mail.mailers.smtp.username' => env('MAIL_USERNAME'),
+                    'mail.mailers.smtp.password' => env('MAIL_PASSWORD'),
+                    'mail.mailers.smtp.encryption' => env('MAIL_ENCRYPTION', 'tls'),
+                ]);
+                
+                \Mail::raw('Test SMTP email from server - ' . now(), function($message) {
+                    $message->to('satyajeetbcd@gmail.com')
+                           ->subject('Server SMTP Test - ' . now());
+                });
+                $debugInfo['mail_test']['smtp'] = 'SUCCESS - Check your email';
+            } catch (\Exception $e) {
+                $debugInfo['mail_test']['smtp'] = 'FAILED: ' . $e->getMessage();
+            }
+        } else {
+            $debugInfo['mail_test']['smtp'] = 'SKIPPED - SMTP not configured';
+        }
+        
+        // 5. Test contact form method
+        try {
+            $controller = new \App\Http\Controllers\FrontendController();
+            $reflection = new ReflectionClass($controller);
+            $method = $reflection->getMethod('sendSimpleContactEmail');
+            $method->setAccessible(true);
+            
+            $testData = [
+                'name' => 'Debug Test',
+                'phone' => '1234567890',
+                'email' => 'debug@test.com',
+                'message' => 'Debug test from server',
+                'submitted_at' => now()->format('F j, Y \a\t g:i A'),
+            ];
+            
+            $method->invoke($controller, $testData);
+            $debugInfo['mail_test']['contact_form'] = 'SUCCESS - Check your email';
+        } catch (\Exception $e) {
+            $debugInfo['mail_test']['contact_form'] = 'FAILED: ' . $e->getMessage();
+        }
+        
+        // 6. Server information
+        $debugInfo['server_info'] = [
+            'php_version' => PHP_VERSION,
+            'server_software' => $_SERVER['SERVER_SOFTWARE'] ?? 'Unknown',
+            'os' => PHP_OS,
+            'timezone' => date_default_timezone_get(),
+            'current_time' => now()->toDateTimeString(),
+        ];
+        
+        return response()->json($debugInfo, 200, [], JSON_PRETTY_PRINT);
+        
+    } catch (\Exception $e) {
+        return response()->json([
+            'error' => 'Debug failed: ' . $e->getMessage(),
+            'trace' => $e->getTraceAsString()
+        ], 500);
+    }
+});
+
 // Review routes
 Route::get('/reviews', [App\Http\Controllers\ReviewController::class, 'index'])->name('reviews');
 Route::post('/reviews', [App\Http\Controllers\ReviewController::class, 'store'])->name('reviews.store');
